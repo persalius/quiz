@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Inter } from 'next/font/googles';
 
 export default function Home() {
   return (

@@ -1,6 +1,7 @@
 'use client';
 
-import { CSSProperties, FC, useEffect, useRef } from 'react';
+import { CSSProperties, FC } from 'react';
+import { motion } from 'motion/react';
 import { quizStepsLength } from '@/shared/constants/routes';
 
 interface Props {
@@ -9,11 +10,6 @@ interface Props {
 
 export const Progress: FC<Props> = ({ quizId }) => {
   const percent = (100 / quizStepsLength) * quizId;
-  const prevState = useRef(0);
-
-  useEffect(() => {
-    prevState.current = quizId;
-  }, [quizId]);
 
   return (
     <div
@@ -21,12 +17,15 @@ export const Progress: FC<Props> = ({ quizId }) => {
       aria-valuemin={1}
       aria-valuemax={quizStepsLength}
       aria-valuenow={quizId}
-      //   className="bg-regal  -grey h-1 w-full overflow-hidden rounded-full"
+      className="bg-regal-grey h-1 w-full overflow-hidden rounded-full"
     >
-      <button onClick={() => console.log(prevState)}>Click</button>
-      <div
+      <motion.div
         style={{ '--width': `${percent}%` } as CSSProperties}
-        className="bg-main-100 h-full w-[var(--width)] transition-all"
+        className="bg-regal-pink h-full w-[var(--width)]"
+        layout
+        initial={{ width: `${percent}%` }}
+        animate={{ width: `${percent}%` }}
+        layoutId="progress"
       />
     </div>
   );

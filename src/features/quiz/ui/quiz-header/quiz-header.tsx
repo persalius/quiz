@@ -21,11 +21,11 @@ export const QuizHeader: FC<Props> = ({ quizId }) => {
             <ArrowIcon />
           </Link>
         ) : (
-          <div className="h-6" />
+          <div className="h-6 w-6" />
         )}
 
         <Steps quizId={quizId} />
-        <div className="h-6" />
+        <div className="h-6 w-6" />
       </div>
       <Progress quizId={quizId} />
     </header>

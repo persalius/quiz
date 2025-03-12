@@ -13,6 +13,7 @@
   "dependencies": {
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "motion": "^12.5.0",
     "next": "15.2.2",
     "next-intl": "^3.26.5",
     "react": "^19.0.0",

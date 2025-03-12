@@ -19,7 +19,7 @@ export default async function Layout({
   return (
     <>
       <QuizHeader quizId={quizId} />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 pt-11">{children}</main>
     </>
   );
 }

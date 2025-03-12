@@ -1,7 +1,7 @@
+import { FC } from 'react';
 import { quizStepsLength } from '@/shared/constants/routes';
 import { cn } from '@/shared/lib/utils/cn';
 import { Typography } from '@/shared/ui/typography';
-import { FC } from 'react';
 
 interface Props {
   quizId: number;

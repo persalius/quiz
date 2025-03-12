@@ -1,0 +1,8 @@
+{
+  "HomePage": {
+    "title": "Take the Quiz!"
+  },
+  "LocaleSwitcher": {
+    "locale": "{locale, select, en {English} de {German} fr {French} es {Spanish} other {Unknown}}"
+  }
+}

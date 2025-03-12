@@ -6,18 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npx lint-staged"
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
+    "*.js": "eslint",
+    "*.ts": "eslint",
+    "*.tsx": "eslint"
   },
   "dependencies": {
     "next": "15.2.2",

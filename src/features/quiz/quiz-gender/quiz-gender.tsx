@@ -1,5 +1,6 @@
-import { Typography } from '@/shared/ui/typography';
 import { useTranslations } from 'next-intl';
+import { Typography } from '@/shared/ui/typography';
+import { List } from './components/list';
 
 export const QuizGender = () => {
   const t = useTranslations('QuizGender');
@@ -12,6 +13,8 @@ export const QuizGender = () => {
           {t('description')}
         </Typography>
       </div>
+
+      <List />
     </section>
   );
 };

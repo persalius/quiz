@@ -17,7 +17,6 @@ const keys = Object.keys(quizSteps) as QuizStep[];
 export const QuizHeader: FC<Props> = ({ quizId }) => {
   const quizNumber = getQuizNumber(quizId);
   const prevStep = keys[quizNumber - 2];
-  console.log('prevStep', prevStep);
 
   return (
     <header className="pt-2">

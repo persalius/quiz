@@ -4,6 +4,7 @@ import { cn } from '../lib/utils/cn';
 type Props = ButtonHTMLAttributes<HTMLButtonElement>;
 
 const buttonClasses = cn(
+  'flex justify-center items-center',
   'bg-main-300 hover:bg-main-300/75 active:bg-main-300/65 focus:outline-none focus-visible:ring-2',
   'cursor-pointer rounded-2xl transition-colors disabled:cursor-default',
   'font-albert text-[17px] leading-6 font-medium text-white',

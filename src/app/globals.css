@@ -3,10 +3,13 @@
 @theme {
   --color-main-500: rgba(31, 0, 43, 1);
   --color-main-300: rgba(54, 23, 61, 1);
-  --color-regal-grey: #e8eaf2;
+  --color-regal-grey-50: #f2f3f5;
+  --color-regal-grey-100: #e8eaf2;
+  --color-regal-grey-200: #c4c8cc;
   --color-regal-pink: #e4229c;
 }
 
 @theme inline {
   --font-albert: var(--font-albert-sans);
+  --font-nunito: var(--font-nunito-sans);
 }

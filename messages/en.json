@@ -4,5 +4,13 @@
   },
   "LocaleSwitcher": {
     "locale": "{locale, select, en {English} de {German} fr {French} es {Spanish} other {Unknown}}"
+  },
+  "QuizLanguage": {
+    "title": "What is your preferred language?",
+    "description": "Choose language"
+  },
+  "QuizGender": {
+    "title": "What gender do you identify with?",
+    "description": "Please share how do you identify yourself"
   }
 }

@@ -1,6 +1,6 @@
+import { QuizStep } from '../types/quiz';
+
 export const routes = {
   home: '/',
-  quiz: (id: number) => `/quiz/${id}`,
+  quiz: (id: QuizStep) => `/quiz/${id}`,
 };
-
-export const quizStepsLength = 5;

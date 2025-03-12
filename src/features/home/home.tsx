@@ -11,7 +11,7 @@ export const Home = () => {
   return (
     <>
       <Typography variant="h1">{t('title')}</Typography>
-      <Link href={routes.quiz(1)}>Got to quiz</Link>
+      <Link href={routes.quiz('language')}>Got to quiz</Link>
     </>
   );
 };

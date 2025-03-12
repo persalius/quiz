@@ -5,9 +5,7 @@ import { cn } from '@/shared/lib/utils/cn';
 const typographyVariants = cva('text-white', {
   variants: {
     variant: {
-      h1: 'text-4xl font-bold',
-      h2: 'text-3xl font-semibold',
-      h3: 'text-2xl font-medium',
+      h1: 'text-[28px] font-bold text-regal-grey-50 leading-[34px]',
       body: 'text-[17px] leading-6',
     },
   },
@@ -24,8 +22,6 @@ const variantToTag: Record<
   keyof JSX.IntrinsicElements
 > = {
   h1: 'h1',
-  h2: 'h2',
-  h3: 'h3',
   body: 'p',
 };
 

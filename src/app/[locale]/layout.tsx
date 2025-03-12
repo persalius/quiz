@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { Albert_Sans } from 'next/font/google';
+import { Albert_Sans, Nunito_Sans } from 'next/font/google';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Locale, routing } from '@/i18n/routing';
@@ -8,6 +8,11 @@ import '../globals.css';
 
 const albertSans = Albert_Sans({
   variable: '--font-albert-sans',
+  subsets: ['latin'],
+});
+
+const nunitoSans = Nunito_Sans({
+  variable: '--font-nunito-sans',
   subsets: ['latin'],
 });
 
@@ -33,7 +38,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${albertSans.variable} bg-main-500 container mx-auto flex min-h-screen flex-col antialiased`}
+        className={`${albertSans.variable} ${nunitoSans.variable} bg-main-500 container mx-auto flex min-h-screen flex-col px-5 antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}

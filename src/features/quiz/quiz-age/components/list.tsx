@@ -19,7 +19,11 @@ export const List = () => {
     <ul className="flex flex-col justify-center gap-3 md:grid md:grid-cols-2">
       {ageVariants.map(({ value, translateValue }) => (
         <li key={value}>
-          <Button className="w-full" onClick={() => handleClick(value)}>
+          <Button
+            size="lg"
+            className="w-full"
+            onClick={() => handleClick(value)}
+          >
             {t('age', { age: value, translateValue })}
           </Button>
         </li>

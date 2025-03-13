@@ -19,7 +19,7 @@ export const QuizHeader: FC<Props> = ({ quizId }) => {
   const prevStep = keys[quizNumber - 2];
 
   return (
-    <header className="pt-2">
+    <header className="pt-4">
       <div className="mb-5 flex items-center justify-between">
         {quizNumber !== 1 ? (
           <Link

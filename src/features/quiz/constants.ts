@@ -31,3 +31,22 @@ export const ageVariants = [
     translateValue: '50',
   },
 ];
+
+export const hateVariants = [
+  {
+    translateValue: 'logic',
+    value: 'Lack of logic',
+  },
+  {
+    translateValue: 'speed',
+    value: 'A slow speed',
+  },
+  {
+    translateValue: 'humor',
+    value: 'Lack of humor',
+  },
+  {
+    translateValue: 'generic',
+    value: 'Way too generic ending',
+  },
+];

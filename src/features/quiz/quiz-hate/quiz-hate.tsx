@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Typography } from '@/shared/ui/typography';
+import { List } from './components/list';
 
 export const QuizHate = () => {
   const t = useTranslations('QuizHate');
@@ -18,6 +19,8 @@ export const QuizHate = () => {
           })}
         </Typography>
       </div>
+
+      <List />
     </section>
   );
 };

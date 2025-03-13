@@ -55,29 +55,36 @@ export const topicsVariants = [
   {
     image: '/werewolf.png',
     value: 'Werewolf',
+    translateValue: 'werewolf',
   },
   {
     image: '/action.png',
     value: 'Action',
+    translateValue: 'action',
   },
   {
     image: '/royalObsession.png',
     value: 'Royal Obsession',
+    translateValue: 'royalObsession',
   },
   {
     image: '/romance.png',
     value: 'Romance',
+    translateValue: 'romance',
   },
   {
     image: '/youngAdult.png',
     value: 'Young Adult',
+    translateValue: 'youngAdult',
   },
   {
     image: '/badBoy.png',
     value: 'Bad Boy',
+    translateValue: 'badBoy',
   },
   {
     image: '/billionaire.png',
     value: 'Billionaire',
+    translateValue: 'billionaire',
   },
 ];

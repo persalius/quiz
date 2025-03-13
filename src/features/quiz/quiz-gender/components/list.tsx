@@ -26,7 +26,7 @@ export const List = () => {
             onClick={() => handleClick(value)}
           >
             <Image src={image} alt="female" width={52} height={52} />
-            <Typography className="font-nunito text-[15px] leading-5 font-semibold">
+            <Typography className="text-[15px] leading-5 font-semibold">
               {t(value)}
             </Typography>
           </Button>

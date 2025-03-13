@@ -7,10 +7,10 @@ import { List } from './components/list';
 import { Button } from '@/shared/ui/button';
 import { routes } from '@/shared/constants/routes';
 
-export const QuizHate = () => {
+export const QuizTopics = () => {
   const router = useRouter();
   const tCommon = useTranslations('Common');
-  const t = useTranslations('QuizHate');
+  const t = useTranslations('QuizTopics');
 
   const handleClick = () => {
     router.push(routes.quiz('topics'));
@@ -20,15 +20,9 @@ export const QuizHate = () => {
     <section className="flex flex-1 flex-col justify-between gap-4 pb-4">
       <div>
         <div className="font-nunito mb-6 flex flex-col items-center gap-4 text-center">
-          <Typography
-            variant="h1"
-            className="font-albert text-3xl font-extrabold text-white"
-          >
-            {t.rich('title', {
-              highlighted: (chunks) => (
-                <span className="text-regal-pink-300">{chunks}</span>
-              ),
-            })}
+          <Typography variant="h1">{t('title')}</Typography>
+          <Typography className="text-regal-grey-200">
+            {t('description')}
           </Typography>
         </div>
 

@@ -27,5 +27,9 @@
     "speed": "A slow speed",
     "humor": "Lack of humor",
     "generic": "Way too generic ending"
+  },
+  "QuizTopics": {
+    "title": "What are your favorite topics?",
+    "description": "Choose up to 3 topics you like"
   }
 }

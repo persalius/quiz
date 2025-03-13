@@ -2,11 +2,12 @@ import { FC, JSX } from 'react';
 import { VariantProps, cva } from 'class-variance-authority';
 import { cn } from '@/shared/lib/utils/cn';
 
-const typographyVariants = cva('text-white', {
+const typographyVariants = cva('text-white font-nunito', {
   variants: {
     variant: {
       h1: 'text-[28px] font-bold text-regal-grey-50 leading-[34px]',
       body: 'text-[17px] leading-6',
+      small: 'text-[13px]',
     },
   },
   defaultVariants: {
@@ -23,6 +24,7 @@ const variantToTag: Record<
 > = {
   h1: 'h1',
   body: 'p',
+  small: 'p',
 };
 
 export const Typography: FC<TypographyProps> = ({

@@ -50,3 +50,34 @@ export const hateVariants = [
     value: 'Way too generic ending',
   },
 ];
+
+export const topicsVariants = [
+  {
+    image: '/werewolf.png',
+    value: 'Werewolf',
+  },
+  {
+    image: '/action.png',
+    value: 'Action',
+  },
+  {
+    image: '/royalObsession.png',
+    value: 'Royal Obsession',
+  },
+  {
+    image: '/romance.png',
+    value: 'Romance',
+  },
+  {
+    image: '/youngAdult.png',
+    value: 'Young Adult',
+  },
+  {
+    image: '/badBoy.png',
+    value: 'Bad Boy',
+  },
+  {
+    image: '/billionaire.png',
+    value: 'Billionaire',
+  },
+];

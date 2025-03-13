@@ -15,7 +15,8 @@ const variants = cva('bg-main-300 cursor-pointer flex items-center', {
   variants: {
     variant: {
       box: 'justify-between gap-2 h-19 rounded-2xl px-5',
-      circle: 'h-22 w-22 bg-main-300 rounded-full flex-col justify-center',
+      circle:
+        'h-22 w-22 bg-main-300 rounded-full flex-col justify-center overflow-hidden',
     },
     isChecked: {
       true: '',
@@ -54,7 +55,7 @@ export const Checkbox: FC<PropsWithChildren<CheckboxProps>> = ({
   return (
     <motion.label
       whileHover={{ scale: 1.01 }}
-      whileTap={{ scale: 0.95 }}
+      whileTap={{ scale: 0.9 }}
       whileFocus={{ scale: 1.03 }}
       transition={{ duration: 0.1, type: 'spring', stiffness: 100 }}
       htmlFor={id}

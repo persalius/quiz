@@ -27,7 +27,7 @@ export const Progress: FC<Props> = ({ quizId }) => {
         className="bg-regal-pink h-full w-[var(--width)]"
         layout
         layoutId="progress"
-        transition={{ type: 'spring' }}
+        transition={{ type: 'spring', stiffness: 50 }}
         initial={{ width: `${percent}%` }}
         animate={{ width: `${percent}%` }}
       />

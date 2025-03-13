@@ -7,7 +7,7 @@ import { useRouter } from '@/i18n/navigation';
 import { routes } from '@/shared/constants/routes';
 
 export const List = () => {
-  const t = useTranslations('LocaleSwitcher');
+  const t = useTranslations('QuizLanguage');
   const router = useRouter();
 
   const handleClick = (language: string) => {

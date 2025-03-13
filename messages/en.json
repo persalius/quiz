@@ -2,15 +2,23 @@
   "HomePage": {
     "title": "Take the Quiz!"
   },
-  "LocaleSwitcher": {
-    "locale": "{locale, select, en {English} de {German} fr {French} es {Spanish} other {Unknown}}"
-  },
   "QuizLanguage": {
     "title": "What is your preferred language?",
-    "description": "Choose language"
+    "description": "Choose language",
+    "locale": "{locale, select, en {English} de {German} fr {French} es {Spanish} other {Unknown}}"
   },
   "QuizGender": {
     "title": "What gender do you identify with?",
-    "description": "Please share how do you identify yourself"
+    "description": "Please share how do you identify yourself",
+    "male": "Male",
+    "female": "Female",
+    "other": "Other"
+  },
+  "QuizAge": {
+    "title": "What is your age?",
+    "age": "{age}{translateValue, select, 50 {} other { years}}"
+  },
+  "QuizHate": {
+    "title": "What do you <highlighted>hate</highlighted> the most in a book?"
   }
 }

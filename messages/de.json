@@ -2,7 +2,20 @@
   "HomePage": {
     "title": "Take the Quiz!"
   },
-  "LocaleSwitcher": {
+  "QuizLanguage": {
+    "title": "What is your preferred language?",
+    "description": "Choose language",
     "locale": "{locale, select, en {English} de {German} fr {French} es {Spanish} other {Unknown}}"
+  },
+  "QuizGender": {
+    "title": "What gender do you identify with?",
+    "description": "Please share how do you identify yourself",
+    "male": "Male",
+    "female": "Female",
+    "other": "Other"
+  },
+  "QuizAge": {
+    "title": "What is your age?",
+    "age": "{age, select, 50+ {} other { years}}"
   }
 }

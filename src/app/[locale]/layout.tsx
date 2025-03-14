@@ -29,7 +29,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${albertSans.variable} ${nunitoSans.variable} ${niconne.variable} bg-main-500 container mx-auto flex min-h-screen flex-col px-5 antialiased`}
+        className={`${albertSans.variable} ${nunitoSans.variable} ${niconne.variable} bg-main-500 container mx-auto flex h-dvh flex-col px-5 antialiased`}
       >
         <Providers>
           <NextIntlClientProvider messages={messages}>

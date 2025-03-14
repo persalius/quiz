@@ -2,7 +2,7 @@ import { Completion } from '@/features/completion/completion';
 
 export default function CompletionPage() {
   return (
-    <main className="h-screen py-5">
+    <main className="flex-1 py-5">
       <Completion />
     </main>
   );

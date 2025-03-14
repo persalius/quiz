@@ -38,5 +38,8 @@
     "youngAdult": "Young Adult",
     "badBoy": "Bad Boy",
     "billionaire": "Billionaire"
+  },
+  "SearchCollections": {
+    "title": "Finding collections for you..."
   }
 }

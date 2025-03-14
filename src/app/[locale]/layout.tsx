@@ -4,6 +4,7 @@ import { Albert_Sans, Nunito_Sans } from 'next/font/google';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Locale, routing } from '@/i18n/routing';
+import Providers from '../providers';
 import '../globals.css';
 
 const albertSans = Albert_Sans({
@@ -40,9 +41,11 @@ export default async function RootLayout({
       <body
         className={`${albertSans.variable} ${nunitoSans.variable} bg-main-500 container mx-auto flex min-h-screen flex-col px-5 antialiased`}
       >
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <Providers>
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </Providers>
       </body>
     </html>
   );

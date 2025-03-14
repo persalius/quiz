@@ -37,7 +37,7 @@ export const Email = () => {
   };
 
   return (
-    <section className="flex flex-1 flex-col items-center pt-18 pb-5">
+    <section className="flex h-full flex-1 flex-col items-center pt-18">
       <div className="flex flex-col items-center gap-3">
         <Typography
           variant="h1"
@@ -54,7 +54,7 @@ export const Email = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="flex w-full flex-1 flex-col justify-between gap-4 pt-14"
       >
-        <div className="flex w-full flex-col items-center gap-14">
+        <div className="flex w-full flex-1 flex-col items-center gap-14">
           <Controller
             name="email"
             control={control}

@@ -11,7 +11,7 @@ export const Transition = ({ children }: { children: React.ReactNode }) => {
       key={pathname}
       initial={{
         opacity: 0,
-        scale: 0.95,
+        scale: 0.9,
         clipPath: 'circle(0% at 50% 50%)',
       }}
       animate={{
@@ -19,12 +19,7 @@ export const Transition = ({ children }: { children: React.ReactNode }) => {
         scale: 1,
         clipPath: 'circle(100% at 50% 50%)',
       }}
-      exit={{
-        opacity: 0,
-        scale: 1.05,
-        clipPath: 'circle(0% at 50% 50%)',
-      }}
-      transition={{ type: 'spring', duration: 1 }}
+      transition={{ type: 'spring', duration: 1, bounce: 0 }}
       className="flex flex-1 flex-col"
     >
       {children}

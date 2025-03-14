@@ -2,7 +2,7 @@ import { Email } from '@/features/email/email';
 
 export default function EmailPage() {
   return (
-    <main className="h-screen py-5">
+    <main className="flex-1 py-5">
       <Email />
     </main>
   );

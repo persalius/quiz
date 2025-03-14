@@ -1,4 +1,5 @@
 import { FC, useId } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '../lib/utils/cn';
 
 interface Props {
@@ -31,7 +32,11 @@ export const TextField: FC<Props> = ({
 
   return (
     <div
-      className={cn('fle-col flex flex-col gap-1', className, classNames?.root)}
+      className={cn(
+        'fle-col relative flex flex-col pb-5',
+        className,
+        classNames?.root
+      )}
     >
       <input
         aria-invalid={isInvalid}
@@ -52,11 +57,20 @@ export const TextField: FC<Props> = ({
         )}
       />
 
-      {!!errorMessage && (
-        <span id={alertId} role="alert" className="pl-8 text-sm text-red-600">
-          {errorMessage}
-        </span>
-      )}
+      <AnimatePresence>
+        {!!errorMessage && (
+          <motion.span
+            id={alertId}
+            role="alert"
+            className="absolute bottom-0 left-0 origin-top pl-8 text-sm text-red-600"
+            initial={{ scaleY: 0, opacity: 0 }}
+            animate={{ scaleY: 1, opacity: 1 }}
+            exit={{ scaleY: 0, opacity: 0 }}
+          >
+            {errorMessage}
+          </motion.span>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

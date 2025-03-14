@@ -9,6 +9,14 @@ import { CheckboxIndicator } from './indicator';
 interface CheckboxProps {
   className?: string;
   variant?: 'box' | 'circle';
+  value: string;
+  onChange?: ({
+    value,
+    isChecked,
+  }: {
+    value: string;
+    isChecked: boolean;
+  }) => void;
 }
 
 const variants = cva('bg-main-300 cursor-pointer flex items-center', {
@@ -44,12 +52,15 @@ export const Checkbox: FC<PropsWithChildren<CheckboxProps>> = ({
   children,
   className,
   variant = 'box',
+  value,
+  onChange,
 }) => {
   const [isChecked, setIsChecked] = useState(false);
   const id = useId();
 
   const onToggle = () => {
     setIsChecked((prevState) => !prevState);
+    onChange?.({ value, isChecked });
   };
 
   return (
@@ -68,6 +79,7 @@ export const Checkbox: FC<PropsWithChildren<CheckboxProps>> = ({
         id={id}
         isChecked={isChecked}
         onToggle={onToggle}
+        value={value}
       />
     </motion.label>
   );

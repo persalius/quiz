@@ -28,7 +28,7 @@ export const Transition = ({ children }: { children: React.ReactNode }) => {
         filter: 'blur(10px)',
       }}
       transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
-      className="relative"
+      className="relative flex flex-1 flex-col"
     >
       {children}
     </motion.div>

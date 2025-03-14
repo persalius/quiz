@@ -27,6 +27,7 @@ interface Props {
   id: string;
   isChecked: boolean;
   onToggle: () => void;
+  value: string | number;
 }
 
 export const CheckboxIndicator: FC<Props> = ({
@@ -34,12 +35,14 @@ export const CheckboxIndicator: FC<Props> = ({
   id,
   isChecked,
   onToggle,
+  value,
 }) => {
   return (
     <div className={cn('relative flex items-center', isHidden && 'hidden')}>
       <input
         tabIndex={-1}
         type="checkbox"
+        value={value}
         checked={isChecked}
         className="border-regal-pink-300 bg-main-200 checked:bg-regal-pink-300 relative h-6 w-6 cursor-pointer appearance-none rounded-lg border-2 transition-all duration-500"
         onChange={onToggle}

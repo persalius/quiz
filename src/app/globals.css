@@ -7,8 +7,11 @@
   --color-regal-grey-50: #f2f3f5;
   --color-regal-grey-100: #e8eaf2;
   --color-regal-grey-200: #c4c8cc;
+  --color-regal-grey-300: #b6b8c3;
   --color-regal-pink: #e4229c;
   --color-regal-pink-300: #e4229b;
+  --color-regal-pink-400: #d0006e;
+  --color-regal-pink-500: #eb2f9a;
 }
 
 @theme inline {

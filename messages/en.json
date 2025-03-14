@@ -1,6 +1,8 @@
 {
   "Common": {
-    "next": "Next"
+    "next": "Next",
+    "email": "Email",
+    "policy": "By continuing I agree with <highlighted>Privacy policy</highlighted> and <highlightedsecond>Terms of use.</highlightedsecond>"
   },
   "HomePage": {
     "title": "Take the Quiz!"
@@ -41,5 +43,9 @@
   },
   "SearchCollections": {
     "title": "Finding collections for you..."
+  },
+  "Email": {
+    "description": "Enter your email to get full access",
+    "placeholder": "Your email"
   }
 }

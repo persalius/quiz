@@ -24,7 +24,7 @@ export const Transition = ({ children }: { children: React.ReactNode }) => {
         scale: 1.05,
         clipPath: 'circle(0% at 50% 50%)',
       }}
-      transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
+      transition={{ type: 'spring', duration: 1 }}
       className="flex flex-1 flex-col"
     >
       {children}

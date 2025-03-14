@@ -1,21 +1,11 @@
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { Albert_Sans, Nunito_Sans } from 'next/font/google';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Locale, routing } from '@/i18n/routing';
 import Providers from '../providers';
 import '../globals.css';
-
-const albertSans = Albert_Sans({
-  variable: '--font-albert-sans',
-  subsets: ['latin'],
-});
-
-const nunitoSans = Nunito_Sans({
-  variable: '--font-nunito-sans',
-  subsets: ['latin'],
-});
+import { albertSans, niconne, nunitoSans } from '../fonts';
 
 export const metadata: Metadata = {
   title: 'Quiz',
@@ -39,7 +29,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${albertSans.variable} ${nunitoSans.variable} bg-main-500 container mx-auto flex min-h-screen flex-col px-5 antialiased`}
+        className={`${albertSans.variable} ${nunitoSans.variable} ${niconne.variable} bg-main-500 container mx-auto flex min-h-screen flex-col px-5 antialiased`}
       >
         <Providers>
           <NextIntlClientProvider messages={messages}>

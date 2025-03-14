@@ -4,6 +4,7 @@
   --color-main-500: rgba(31, 0, 43, 1);
   --color-main-300: #36173d;
   --color-main-200: #6d4376;
+  --color-regal-grey: #ececfb;
   --color-regal-grey-50: #f2f3f5;
   --color-regal-grey-100: #e8eaf2;
   --color-regal-grey-200: #c4c8cc;
@@ -17,6 +18,7 @@
 @theme inline {
   --font-albert: var(--font-albert-sans);
   --font-nunito: var(--font-nunito-sans);
+  --font-niconne: var(--font-niconne);
 }
 
 @layer base {

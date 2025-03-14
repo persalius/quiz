@@ -12,7 +12,7 @@ type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
 export const Link: FC<Props> = ({
   className,
   variant = 'primary',
-  size = 'md',
+  size = 'sm',
   ...props
 }) => {
   return (

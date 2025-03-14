@@ -13,7 +13,6 @@ export const Home = () => {
       <Typography variant="h1">{t('title')}</Typography>
       <Link
         variant="secondary"
-        size="sm"
         className="w-full max-w-3xs"
         href={routes.quiz('language')}
       >

@@ -6,4 +6,5 @@ export const routes = {
   email: '/email',
   policy: '/policy',
   terms: '/terms',
+  completion: '/completion',
 };

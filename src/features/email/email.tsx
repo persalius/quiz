@@ -2,22 +2,27 @@
 
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useRouter } from '@/i18n/navigation';
+import { z } from 'zod';
 import { Button } from '@/shared/ui/button';
 import { TextField } from '@/shared/ui/text-field';
 import { Typography } from '@/shared/ui/typography';
 import { useTranslations } from 'next-intl';
-import { FormType, schema } from './schema';
+import { useSchema } from './schema';
 import { Policy } from './components/policy';
+import { routes } from '@/shared/constants/routes';
 
 export const Email = () => {
   const tCommon = useTranslations('Common');
   const t = useTranslations('Email');
+  const schema = useSchema();
+  const router = useRouter();
 
   const {
     control,
     handleSubmit,
     formState: { isValid },
-  } = useForm<FormType>({
+  } = useForm<z.infer<typeof schema>>({
     mode: 'onTouched',
     shouldFocusError: true,
     resolver: zodResolver(schema),
@@ -26,8 +31,9 @@ export const Email = () => {
     },
   });
 
-  const onSubmit = (data: FormType) => {
+  const onSubmit = (data: z.infer<typeof schema>) => {
     console.log(data);
+    router.push(routes.completion);
   };
 
   return (

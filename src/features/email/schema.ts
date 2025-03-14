@@ -1,7 +1,12 @@
+import { useTranslations } from 'next-intl';
 import { z } from 'zod';
 
-export const schema = z.object({
-  email: z.string().email({ message: 'Invalid email' }),
-});
+export const useSchema = () => {
+  const t = useTranslations('Email');
 
-export type FormType = z.infer<typeof schema>;
+  const schema = z.object({
+    email: z.string().email({ message: t('invalidEmail') }),
+  });
+
+  return schema;
+};

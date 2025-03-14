@@ -46,6 +46,12 @@
   },
   "Email": {
     "description": "Enter your email to get full access",
-    "placeholder": "Your email"
+    "placeholder": "Your email",
+    "invalidEmail": "Invalid email"
+  },
+  "Completion": {
+    "title": "Thank you",
+    "description": "for supporting us and passing quiz",
+    "download": "Download my answers"
   }
 }

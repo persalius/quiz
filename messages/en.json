@@ -52,6 +52,7 @@
   "Completion": {
     "title": "Thank you",
     "description": "for supporting us and passing quiz",
-    "download": "Download my answers"
+    "download": "Download my answers",
+    "retakeQuiz": "Retake quiz"
   }
 }

@@ -2,34 +2,40 @@ import { Quiz } from '@/shared/types/quiz';
 
 export const quizDefaultData: Quiz = {
   language: {
-    question: 'What is your preferred language?',
-    answer: '',
+    order: 1,
+    title: 'What is your preferred language?',
     type: 'single-select',
+    answer: '',
   },
   gender: {
-    question: 'What gender do you identify with?',
-    answer: '',
+    order: 2,
+    title: 'What gender do you identify with?',
     type: 'single-select-image',
+    answer: '',
   },
   age: {
-    question: 'What is your age?',
-    answer: '',
+    order: 3,
+    title: 'What is your age?',
     type: 'single-select',
+    answer: '',
   },
   hate: {
-    question: 'What do you hate the most in a book?',
-    answer: '',
+    order: 4,
+    title: 'What do you hate the most in a book?',
     type: 'multiple-select',
+    answer: '',
   },
   topics: {
-    question: 'What are your favorite topics?',
-    answer: '',
+    order: 5,
+    title: 'What are your favorite topics?',
     type: 'bubble',
+    answer: '',
   },
   email: {
-    question: 'Email',
-    answer: '',
+    order: 6,
+    title: 'Email',
     type: 'email',
+    answer: '',
   },
 };
 

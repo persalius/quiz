@@ -10,7 +10,8 @@ export type QuizType =
   | 'email';
 
 export interface QuizElement {
-  question: string;
+  order: number;
+  title: string;
   answer: string;
   type: QuizType;
 }

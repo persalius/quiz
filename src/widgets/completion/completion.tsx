@@ -9,10 +9,13 @@ import { routes } from '@/shared/constants/routes';
 import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
 import { useClearQuiz } from '@/entities/quiz/api/hooks';
 import { Button } from '@/shared/ui/button';
+import { useDownloadCSV } from '@/entities/quiz/model/useDownloadCSV';
 
 export const Completion = () => {
   const t = useTranslations('Completion');
   const router = useRouter();
+
+  const { onDownloadCSV } = useDownloadCSV();
 
   const { mutate } = useClearQuiz({
     onSuccess: () => router.replace(routes.quiz('language')),
@@ -36,7 +39,12 @@ export const Completion = () => {
         </div>
 
         <div className="flex w-full flex-col items-center gap-7.5">
-          <Button variant="link" size="link" className="w-full max-w-96">
+          <Button
+            variant="link"
+            size="link"
+            className="w-full max-w-96"
+            onClick={onDownloadCSV}
+          >
             <DownloadIcon />
             {t('download')}
           </Button>

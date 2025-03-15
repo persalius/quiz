@@ -28,8 +28,6 @@ export const TextField: FC<Props> = ({
 }) => {
   const alertId = useId();
 
-  console.log(errorMessage);
-
   return (
     <div
       className={cn(

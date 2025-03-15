@@ -1,21 +1,58 @@
 {
+  "Common": {
+    "next": "Suivant",
+    "email": "Email",
+    "policy": "En continuant, j'accepte la <highlighted>Politique de confidentialité</highlighted> et les <highlightedsecond>Conditions d'utilisation.</highlightedsecond>"
+  },
   "HomePage": {
-    "title": "Take the Quiz!"
+    "title": "Faites le quiz !"
   },
   "QuizLanguage": {
-    "title": "What is your preferred language?",
-    "description": "Choose language",
-    "locale": "{locale, select, en {English} de {German} fr {French} es {Spanish} other {Unknown}}"
+    "title": "Quelle est votre langue préférée ?",
+    "description": "Choisissez une langue",
+    "locale": "{locale, select, en {Anglais} de {Allemand} fr {Français} es {Espagnol} other {Inconnu}}"
   },
   "QuizGender": {
-    "title": "What gender do you identify with?",
-    "description": "Please share how do you identify yourself",
-    "male": "Male",
-    "female": "Female",
-    "other": "Other"
+    "title": "Quel est votre genre ?",
+    "description": "Veuillez indiquer comment vous vous identifiez",
+    "male": "Homme",
+    "female": "Femme",
+    "other": "Autre"
   },
   "QuizAge": {
-    "title": "What is your age?",
-    "age": "{age, select, 50+ {} other { years}}"
+    "title": "Quel est votre âge ?",
+    "age": "{age}{translateValue, select, 50 {} other { ans}}"
+  },
+  "QuizHate": {
+    "title": "Qu'est-ce que vous <highlighted>détestez</highlighted> le plus dans un livre ?",
+    "logic": "Manque de logique",
+    "speed": "Un rythme trop lent",
+    "humor": "Manque d'humour",
+    "generic": "Une fin bien trop générique"
+  },
+  "QuizTopics": {
+    "title": "Quels sont vos sujets préférés ?",
+    "description": "Choisissez jusqu'à 3 sujets que vous aimez",
+    "werewolf": "Loup-garou",
+    "action": "Action",
+    "royalObsession": "Obsession royale",
+    "romance": "Romance",
+    "youngAdult": "Jeunes adultes",
+    "badBoy": "Mauvais garçon",
+    "billionaire": "Milliardaire"
+  },
+  "SearchCollections": {
+    "title": "Recherche de collections pour vous..."
+  },
+  "Email": {
+    "description": "Entrez votre email pour obtenir un accès complet",
+    "placeholder": "Votre email",
+    "invalidEmail": "Email invalide"
+  },
+  "Completion": {
+    "title": "Merci",
+    "description": "de nous soutenir et d'avoir complété le quiz",
+    "download": "Télécharger mes réponses",
+    "retakeQuiz": "Reprendre le quiz"
   }
 }

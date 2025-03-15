@@ -6,7 +6,7 @@ import { Button } from '@/shared/ui/button';
 import { useTranslations } from 'next-intl';
 
 interface Props {
-  onClick: (value: string) => void;
+  onClick: (languageValue: string, languageId: string) => void;
 }
 
 export const List: FC<Props> = ({ onClick }) => {
@@ -18,7 +18,7 @@ export const List: FC<Props> = ({ onClick }) => {
         <li key={language}>
           <Button
             className="w-full"
-            onClick={() => onClick(locales[language].value)}
+            onClick={() => onClick(locales[language].value, language)}
           >
             {t('locale', { locale: language })}
           </Button>

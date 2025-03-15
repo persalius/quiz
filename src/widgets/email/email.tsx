@@ -63,18 +63,15 @@ export const Email = () => {
             <Controller
               name="email"
               control={control}
-              render={({ field, formState }) => {
-                console.log(formState.errors);
-                return (
-                  <TextField
-                    {...field}
-                    placeholder={t('placeholder')}
-                    errorMessage={formState.errors.email?.message}
-                    isInvalid={!!formState.errors.email}
-                    className="w-full"
-                  />
-                );
-              }}
+              render={({ field, formState }) => (
+                <TextField
+                  {...field}
+                  placeholder={t('placeholder')}
+                  errorMessage={formState.errors.email?.message}
+                  isInvalid={!!formState.errors.email}
+                  className="w-full"
+                />
+              )}
             />
 
             <Policy />

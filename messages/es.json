@@ -1,21 +1,58 @@
 {
+  "Common": {
+    "next": "Siguiente",
+    "email": "Correo electrónico",
+    "policy": "Al continuar, acepto la <highlighted>Política de privacidad</highlighted> y los <highlightedsecond>Términos de uso</highlightedsecond>."
+  },
   "HomePage": {
-    "title": "Take the Quiz!"
+    "title": "¡Haz el cuestionario!"
   },
   "QuizLanguage": {
-    "title": "What is your preferred language?",
-    "description": "Choose language",
-    "locale": "{locale, select, en {English} de {German} fr {French} es {Spanish} other {Unknown}}"
+    "title": "¿Cuál es tu idioma preferido?",
+    "description": "Elige un idioma",
+    "locale": "{locale, select, en {Inglés} de {Alemán} fr {Francés} es {Español} other {Desconocido}}"
   },
   "QuizGender": {
-    "title": "What gender do you identify with?",
-    "description": "Please share how do you identify yourself",
-    "male": "Male",
-    "female": "Female",
-    "other": "Other"
+    "title": "¿Con qué género te identificas?",
+    "description": "Por favor, comparte cómo te identificas",
+    "male": "Masculino",
+    "female": "Femenino",
+    "other": "Otro"
   },
   "QuizAge": {
-    "title": "What is your age?",
-    "age": "{age, select, 50+ {} other { years}}"
+    "title": "¿Cuál es tu edad?",
+    "age": "{age}{translateValue, select, 50 {} other { años}}"
+  },
+  "QuizHate": {
+    "title": "¿Qué es lo que más <highlighted>odias</highlighted> en un libro?",
+    "logic": "Falta de lógica",
+    "speed": "Ritmo lento",
+    "humor": "Falta de humor",
+    "generic": "Un final demasiado genérico"
+  },
+  "QuizTopics": {
+    "title": "¿Cuáles son tus temas favoritos?",
+    "description": "Elige hasta 3 temas que te gusten",
+    "werewolf": "Hombre lobo",
+    "action": "Acción",
+    "royalObsession": "Obsesión real",
+    "romance": "Romance",
+    "youngAdult": "Jóvenes adultos",
+    "badBoy": "Chico malo",
+    "billionaire": "Multimillonario"
+  },
+  "SearchCollections": {
+    "title": "Buscando colecciones para ti..."
+  },
+  "Email": {
+    "description": "Introduce tu correo electrónico para obtener acceso completo",
+    "placeholder": "Tu correo electrónico",
+    "invalidEmail": "Correo electrónico no válido"
+  },
+  "Completion": {
+    "title": "Gracias",
+    "description": "por apoyarnos y completar el cuestionario",
+    "download": "Descargar mis respuestas",
+    "retakeQuiz": "Rehacer cuestionario"
   }
 }

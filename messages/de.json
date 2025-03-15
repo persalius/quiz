@@ -1,21 +1,58 @@
 {
+  "Common": {
+    "next": "Weiter",
+    "email": "E-Mail",
+    "policy": "Indem ich fortfahre, stimme ich der <highlighted>Datenschutzrichtlinie</highlighted> und den <highlightedsecond>Nutzungsbedingungen</highlightedsecond> zu."
+  },
   "HomePage": {
-    "title": "Take the Quiz!"
+    "title": "Mache das Quiz!"
   },
   "QuizLanguage": {
-    "title": "What is your preferred language?",
-    "description": "Choose language",
-    "locale": "{locale, select, en {English} de {German} fr {French} es {Spanish} other {Unknown}}"
+    "title": "Welche Sprache bevorzugst du?",
+    "description": "Sprache wählen",
+    "locale": "{locale, select, en {Englisch} de {Deutsch} fr {Französisch} es {Spanisch} other {Unbekannt}}"
   },
   "QuizGender": {
-    "title": "What gender do you identify with?",
-    "description": "Please share how do you identify yourself",
-    "male": "Male",
-    "female": "Female",
-    "other": "Other"
+    "title": "Mit welchem Geschlecht identifizierst du dich?",
+    "description": "Bitte teile uns mit, wie du dich identifizierst",
+    "male": "Männlich",
+    "female": "Weiblich",
+    "other": "Andere"
   },
   "QuizAge": {
-    "title": "What is your age?",
-    "age": "{age, select, 50+ {} other { years}}"
+    "title": "Wie alt bist du?",
+    "age": "{age}{translateValue, select, 50 {} other { Jahre}}"
+  },
+  "QuizHate": {
+    "title": "Was <highlighted>hasst</highlighted> du am meisten in einem Buch?",
+    "logic": "Mangel an Logik",
+    "speed": "Langsames Tempo",
+    "humor": "Mangel an Humor",
+    "generic": "Ein viel zu allgemeines Ende"
+  },
+  "QuizTopics": {
+    "title": "Was sind deine Lieblingsthemen?",
+    "description": "Wähle bis zu 3 Themen, die dir gefallen",
+    "werewolf": "Werwolf",
+    "action": "Action",
+    "royalObsession": "Königliche Besessenheit",
+    "romance": "Romanze",
+    "youngAdult": "Junge Erwachsene",
+    "badBoy": "Bad Boy",
+    "billionaire": "Milliardär"
+  },
+  "SearchCollections": {
+    "title": "Sammlungen für dich finden..."
+  },
+  "Email": {
+    "description": "Gib deine E-Mail-Adresse ein, um vollen Zugriff zu erhalten",
+    "placeholder": "Deine E-Mail",
+    "invalidEmail": "Ungültige E-Mail"
+  },
+  "Completion": {
+    "title": "Danke",
+    "description": "für deine Unterstützung und das Bestehen des Quiz",
+    "download": "Meine Antworten herunterladen",
+    "retakeQuiz": "Quiz erneut machen"
   }
 }

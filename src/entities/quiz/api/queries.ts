@@ -19,6 +19,13 @@ async function mockUpdateQuiz(quiz: Partial<Quiz>) {
   });
 }
 
+async function mockClearQuiz() {
+  return new Promise((resolve) => {
+    localStorage.removeItem('quiz');
+    resolve({});
+  });
+}
+
 export async function getQuiz() {
   try {
     const data = (await mockFetchQuiz()) as unknown as Quiz;
@@ -42,5 +49,19 @@ export async function updateQuiz(quiz: Partial<Quiz>) {
       );
     }
     throw new Error('Error while saving. Please try again.');
+  }
+}
+
+export async function clearQuiz() {
+  try {
+    const data = await mockClearQuiz();
+    return data;
+  } catch (error) {
+    if (error instanceof Error) {
+      throw new Error(
+        `Error while cleaning: ${error.message}. Please try again.`
+      );
+    }
+    throw new Error('Error while cleaning. Please try again.');
   }
 }

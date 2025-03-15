@@ -1,13 +1,22 @@
+'use client';
+
 import { Typography } from '@/shared/ui/typography';
+import { useRouter } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { Checkmark } from './components/checkmark';
 import { DownloadIcon } from '@/shared/icons';
-import { Link } from '@/shared/ui/link';
 import { routes } from '@/shared/constants/routes';
 import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
+import { useClearQuiz } from '@/entities/quiz/api/hooks';
+import { Button } from '@/shared/ui/button';
 
 export const Completion = () => {
   const t = useTranslations('Completion');
+  const router = useRouter();
+
+  const { mutate } = useClearQuiz({
+    onSuccess: () => router.replace(routes.quiz('language')),
+  });
 
   return (
     <CheckQuiz prevStep="email">
@@ -32,9 +41,13 @@ export const Completion = () => {
             {t('download')}
           </Typography>
 
-          <Link variant="secondary" href={routes.home} className="w-full">
+          <Button
+            variant="secondary"
+            onClick={() => mutate()}
+            className="w-full"
+          >
             {t('retakeQuiz')}
-          </Link>
+          </Button>
         </div>
       </section>
     </CheckQuiz>

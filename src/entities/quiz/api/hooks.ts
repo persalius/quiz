@@ -1,5 +1,5 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { getQuiz, updateQuiz } from './queries';
+import { clearQuiz, getQuiz, updateQuiz } from './queries';
 import { queryClient } from '@/app/providers';
 
 export const useGetQuiz = () => {
@@ -16,6 +16,16 @@ export const useUpdateQuiz = ({ onSuccess }: { onSuccess?: () => void }) => {
     onSuccess: (data) => {
       queryClient.setQueryData(['quiz'], data);
       onSuccess?.();
+    },
+  });
+};
+
+export const useClearQuiz = ({ onSuccess }: { onSuccess: () => void }) => {
+  return useMutation({
+    mutationFn: clearQuiz,
+    onSuccess: (data) => {
+      queryClient.setQueryData(['quiz'], data);
+      onSuccess();
     },
   });
 };

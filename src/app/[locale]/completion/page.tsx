@@ -1,4 +1,4 @@
-import { Completion } from '@/widgets/completion/completion';
+import { Completion } from '@/widgets/completion';
 
 export default function CompletionPage() {
   return (

@@ -1,5 +1,6 @@
 import { Quiz } from '@/shared/types/quiz';
 
+// Quiz default configuration
 export const quizDefaultData: Quiz = {
   language: {
     order: 1,
@@ -39,6 +40,7 @@ export const quizDefaultData: Quiz = {
   },
 };
 
+// Shared constants
 export const ageValues = {
   youngAdult: '18-29',
   adults30s: '30-39',
@@ -46,8 +48,7 @@ export const ageValues = {
   seniors: '50+',
 };
 
-// ===== Variants =====
-
+// Quiz variants
 export const genderVariants = [
   {
     image: '/female.png',

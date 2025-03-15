@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { QuizHeader } from '@/widgets/quiz/ui/quiz-header/quiz-header';
+import { QuizHeader } from '@/widgets/quiz';
 import { quizSteps } from '@/shared/constants/quiz';
 import { QuizStep } from '@/shared/types/quiz';
 import { Transition } from '@/shared/ui/transition';

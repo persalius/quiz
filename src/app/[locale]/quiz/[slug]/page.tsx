@@ -1,10 +1,13 @@
-import { QuizGender } from '@/widgets/quiz/quiz-gender/quiz-gender';
-import { QuizLanguage } from '@/widgets/quiz/quiz-language/quiz-language';
-import { QuizAge } from '@/widgets/quiz/quiz-age/quiz-age';
+import {
+  QuizLanguage,
+  QuizGender,
+  QuizAge,
+  QuizHate,
+  QuizTopics,
+} from '@/widgets/quiz';
+
 import { quizSteps } from '@/shared/constants/quiz';
 import { QuizStep } from '@/shared/types/quiz';
-import { QuizHate } from '@/widgets/quiz/quiz-hate/quiz-hate';
-import { QuizTopics } from '@/widgets/quiz/quiz-topics/quiz-topics';
 
 const steps = {
   [quizSteps.language]: <QuizLanguage />,

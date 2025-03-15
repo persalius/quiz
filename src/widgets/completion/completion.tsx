@@ -3,7 +3,7 @@
 import { Typography } from '@/shared/ui/typography';
 import { useRouter } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
-import { Checkmark } from './components/checkmark';
+import { Checkmark } from './ui/checkmark';
 import { DownloadIcon } from '@/shared/icons';
 import { routes } from '@/shared/constants/routes';
 import { CheckQuiz } from '@/features/quiz/ui/check-quiz';

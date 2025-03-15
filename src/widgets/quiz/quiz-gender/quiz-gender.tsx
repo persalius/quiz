@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Typography } from '@/shared/ui/typography';
-import { List } from './components/list';
+import { List } from './ui/list';
 import { routes } from '@/shared/constants/routes';
 import { CheckQuiz } from '../../../features/quiz/ui/check-quiz';
 import { useQuiz } from '../../../entities/quiz/model/useQuiz';

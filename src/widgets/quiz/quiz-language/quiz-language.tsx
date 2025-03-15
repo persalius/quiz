@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useRouter } from '@/i18n/navigation';
 import { Typography } from '@/shared/ui/typography';
-import { List } from './components/List';
+import { List } from './ui/List';
 import { routes } from '@/shared/constants/routes';
 import { useQuiz } from '../../../entities/quiz/model/useQuiz';
 

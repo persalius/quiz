@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { Steps } from './steps';
 import Link from 'next/link';
 import { routes } from '@/shared/constants/routes';
 import { ArrowIcon } from '@/shared/icons';
-import { Progress } from './progress';
+import { Progress } from './ui/progress';
+import { Steps } from './ui/steps';
 import { QuizStep } from '@/shared/types/quiz';
 import { quizSteps } from '@/shared/constants/quiz';
 import { getQuizNumber } from '@/shared/lib/utils/quiz';

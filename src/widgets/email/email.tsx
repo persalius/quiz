@@ -42,7 +42,7 @@ export const Email = () => {
 
   return (
     <CheckQuiz prevStep="topics">
-      <section className="mx-auto flex h-full max-w-xl flex-1 flex-col items-center pt-18">
+      <section className="mx-auto flex h-full w-full max-w-xl flex-1 flex-col items-center pt-18">
         <div className="flex flex-col items-center gap-3">
           <Typography
             variant="h1"

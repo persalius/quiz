@@ -19,7 +19,7 @@ const buttonVariants = cva(
           'bg-main-300 hover:bg-main-300/75 active:not-disabled:bg-main-300/65 rounded-2xl font-medium',
         secondary:
           'bg-regal-pink hover:not-disabled:bg-regal-pink/75 active:not-disabled:bg-regal-pink/65 font-extrabold justify-center rounded-full',
-        link: 'font-semibold p-0',
+        link: 'font-semibold p-0 hover:not-disabled:text-white/70',
       },
       size: {
         sm: 'h-14',

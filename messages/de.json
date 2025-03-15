@@ -21,7 +21,7 @@
   },
   "QuizAge": {
     "title": "Wie alt bist du?",
-    "age": "{age}{translateValue, select, 50 {} other { Jahre}}"
+    "age": "{age}{translateValue, select, seniors {} other { Jahre}}"
   },
   "QuizHate": {
     "title": "Was <highlighted>hasst</highlighted> du am meisten in einem Buch?",

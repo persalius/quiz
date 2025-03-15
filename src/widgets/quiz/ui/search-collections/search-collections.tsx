@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { Typography } from '@/shared/ui/typography';
-import { CircularProgressBar } from '../ui/circular-progress-bar/circular-progress-bar';
+import { CircularProgressBar } from '../circular-progress-bar/circular-progress-bar';
 
 export const SearchCollections = () => {
   const t = useTranslations('SearchCollections');

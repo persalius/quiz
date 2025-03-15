@@ -8,7 +8,7 @@ import { Typography } from '@/shared/ui/typography';
 import { List } from './components/list';
 import { Button } from '@/shared/ui/button';
 import { FormType, schema } from './schema';
-import { SearchCollections } from '../search-collections/search-collections';
+import { SearchCollections } from '../ui/search-collections/search-collections';
 import { CheckQuiz } from '../../../features/quiz/ui/check-quiz';
 import { useQuiz } from '../../../entities/quiz/model/useQuiz';
 

@@ -11,7 +11,7 @@ export const CheckboxLabel: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       {isTextNode(children) ? (
-        <Typography className="cursor-pointer leading-none font-medium">
+        <Typography className="cursor-pointer leading-none font-medium select-none">
           {children}
         </Typography>
       ) : (

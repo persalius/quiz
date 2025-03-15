@@ -42,7 +42,7 @@ export const Email = () => {
 
   return (
     <CheckQuiz prevStep="topics">
-      <section className="flex h-full flex-1 flex-col items-center pt-18">
+      <section className="mx-auto flex h-full max-w-xl flex-1 flex-col items-center pt-18">
         <div className="flex flex-col items-center gap-3">
           <Typography
             variant="h1"
@@ -57,7 +57,7 @@ export const Email = () => {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex w-full flex-1 flex-col justify-between gap-4 pt-14"
+          className="flex w-full flex-1 flex-col items-center justify-between gap-4 pt-14"
         >
           <div className="flex w-full flex-1 flex-col items-center gap-14">
             <Controller
@@ -82,6 +82,7 @@ export const Email = () => {
             variant="secondary"
             size="sm"
             disabled={!isValid}
+            className="w-full max-w-96"
           >
             {tCommon('next')}
           </Button>

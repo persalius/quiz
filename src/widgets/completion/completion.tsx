@@ -36,15 +36,15 @@ export const Completion = () => {
         </div>
 
         <div className="flex w-full flex-col items-center gap-7.5">
-          <Typography className="font-albert flex gap-2 font-semibold">
+          <Button variant="link" size="link" className="w-full max-w-96">
             <DownloadIcon />
             {t('download')}
-          </Typography>
+          </Button>
 
           <Button
             variant="secondary"
             onClick={() => mutate()}
-            className="w-full"
+            className="w-full max-w-96"
           >
             {t('retakeQuiz')}
           </Button>

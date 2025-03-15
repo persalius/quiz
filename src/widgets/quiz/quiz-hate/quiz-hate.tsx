@@ -38,7 +38,7 @@ export const QuizHate = () => {
 
   return (
     <CheckQuiz prevStep="age">
-      <section className="flex flex-1 flex-col gap-4 pb-4">
+      <section className="flex flex-1 flex-col gap-4 pb-5">
         <div className="font-nunito mb-6 flex flex-col items-center gap-4 text-center">
           <Typography
             variant="h1"
@@ -55,7 +55,7 @@ export const QuizHate = () => {
         <FormProvider {...form}>
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-1 flex-col justify-between"
+            className="flex flex-1 flex-col items-center justify-between"
           >
             <List />
 
@@ -63,7 +63,7 @@ export const QuizHate = () => {
               type="submit"
               variant="secondary"
               size="sm"
-              className="w-full"
+              className="w-full max-w-96"
               disabled={!isValid}
             >
               {tCommon('next')}

@@ -19,7 +19,7 @@ export const List = () => {
   };
 
   return (
-    <ul className="flex flex-col gap-3">
+    <ul className="flex w-full flex-col gap-3 md:grid md:grid-cols-2">
       {hateVariants.map(({ value, translateValue }) => (
         <li key={value}>
           <Controller

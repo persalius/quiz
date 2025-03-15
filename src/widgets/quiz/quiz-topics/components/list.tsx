@@ -19,8 +19,8 @@ export const List = () => {
   };
 
   return (
-    <div className="flex items-center justify-center">
-      <ul className="grid grid-cols-3 gap-2">
+    <div className="flex w-full items-center justify-center">
+      <ul className="grid grid-cols-3 gap-2 transition-all md:gap-6">
         {topicsVariants.map(({ value, image, translateValue }) => (
           <li key={value} className="nth-[3n+2]:translate-y-5">
             <Controller

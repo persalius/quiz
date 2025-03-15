@@ -1,5 +1,5 @@
 import { FC, useEffect } from 'react';
-import { useRouter } from '@/i18n/navigation';
+import { useRouter } from '@/shared/lib/i18n/navigation';
 import { animate, motion, useMotionValue, useTransform } from 'motion/react';
 import { routes } from '@/shared/constants/routes';
 

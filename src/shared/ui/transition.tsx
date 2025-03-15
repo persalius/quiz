@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { usePathname } from '@/i18n/navigation';
+import { usePathname } from '@/shared/lib/i18n/navigation';
 
 export const Transition = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();

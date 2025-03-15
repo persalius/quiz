@@ -1,4 +1,4 @@
-import { Link as NavLink } from '@/i18n/navigation';
+import { Link as NavLink } from '@/shared/lib/i18n/navigation';
 import { AnchorHTMLAttributes, FC } from 'react';
 import { cn } from '../lib/utils/cn';
 import { buttonVariants, Variant, Size } from './button';

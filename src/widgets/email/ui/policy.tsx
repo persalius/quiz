@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/shared/lib/i18n/navigation';
 import { Typography } from '@/shared/ui/typography';
 import { routes } from '@/shared/constants/routes';
 

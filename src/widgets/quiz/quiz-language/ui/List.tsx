@@ -1,7 +1,7 @@
 'use client';
 
 import { FC } from 'react';
-import { LocaleKey, locales } from '@/i18n/routing';
+import { LocaleKey, locales } from '@/shared/lib/i18n/routing';
 import { Button } from '@/shared/ui/button';
 import { useTranslations } from 'next-intl';
 

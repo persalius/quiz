@@ -3,15 +3,15 @@
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/shared/ui/button';
 import { TextField } from '@/shared/ui/text-field';
 import { Typography } from '@/shared/ui/typography';
-import { useTranslations } from 'next-intl';
-import { useSchema } from './model/schema';
-import { Policy } from './ui/policy';
 import { routes } from '@/shared/constants/routes';
 import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
-import { useQuiz } from '../../entities/quiz/model/useQuiz';
+import { useQuiz } from '@/entities/quiz/model/useQuiz';
+import { useSchema } from './model/schema';
+import { Policy } from './ui/policy';
 
 export const Email = () => {
   const tCommon = useTranslations('Common');

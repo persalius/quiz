@@ -4,12 +4,12 @@ import { useTranslations } from 'next-intl';
 import { FormProvider, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Typography } from '@/shared/ui/typography';
-import { List } from './ui/list';
 import { Button } from '@/shared/ui/button';
 import { routes } from '@/shared/constants/routes';
+import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
+import { useQuiz } from '@/entities/quiz/model/useQuiz';
+import { List } from './ui/list';
 import { FormType, schema } from './model/schema';
-import { CheckQuiz } from '../../../features/quiz/ui/check-quiz';
-import { useQuiz } from '../../../entities/quiz/model/useQuiz';
 
 export const QuizHate = () => {
   const tCommon = useTranslations('Common');

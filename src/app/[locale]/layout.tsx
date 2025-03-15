@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Locale, routing } from '@/i18n/routing';
+import { Locale, routing } from '@/shared/lib/i18n/routing';
 import Providers from '../providers';
 import '../globals.css';
 import { albertSans, niconne, nunitoSans } from '../fonts';

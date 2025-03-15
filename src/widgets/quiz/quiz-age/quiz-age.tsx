@@ -2,10 +2,10 @@
 
 import { Typography } from '@/shared/ui/typography';
 import { useTranslations } from 'next-intl';
-import { List } from './ui/list';
-import { CheckQuiz } from '../../../features/quiz/ui/check-quiz';
-import { useQuiz } from '../../../entities/quiz/model/useQuiz';
+import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
+import { useQuiz } from '@/entities/quiz/model/useQuiz';
 import { routes } from '@/shared/constants/routes';
+import { List } from './ui/list';
 
 export const QuizAge = () => {
   const t = useTranslations('QuizAge');

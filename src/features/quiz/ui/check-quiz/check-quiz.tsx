@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, PropsWithChildren, useEffect } from 'react';
-import { useRouter } from '@/i18n/navigation';
+import { useRouter } from '@/shared/lib/i18n/navigation';
 import { QuizProperty } from '@/shared/types/quiz';
 import { routes } from '@/shared/constants/routes';
 import { useGetQuiz } from '@/entities/quiz/api/hooks';

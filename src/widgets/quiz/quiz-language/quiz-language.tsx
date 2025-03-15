@@ -1,11 +1,11 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useRouter } from '@/i18n/navigation';
+import { useRouter } from '@/shared/lib/i18n/navigation';
 import { Typography } from '@/shared/ui/typography';
-import { List } from './ui/List';
 import { routes } from '@/shared/constants/routes';
-import { useQuiz } from '../../../entities/quiz/model/useQuiz';
+import { useQuiz } from '@/entities/quiz/model/useQuiz';
+import { List } from './ui/List';
 
 export const QuizLanguage = () => {
   const t = useTranslations('QuizLanguage');

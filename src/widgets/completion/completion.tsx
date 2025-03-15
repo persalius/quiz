@@ -1,7 +1,7 @@
 'use client';
 
 import { Typography } from '@/shared/ui/typography';
-import { useRouter } from '@/i18n/navigation';
+import { useRouter } from '@/shared/lib/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { Checkmark } from './ui/checkmark';
 import { DownloadIcon } from '@/shared/icons';

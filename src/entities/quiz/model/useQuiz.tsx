@@ -1,8 +1,8 @@
-import { useRouter } from '@/i18n/navigation';
+import { useRouter } from '@/shared/lib/i18n/navigation';
 import { useUpdateQuiz } from '../api/hooks';
 import { QuizProperty } from '@/shared/types/quiz';
 import { quizDefaultData } from '../../../widgets/quiz/constants';
-import { Locale } from '@/i18n/routing';
+import { Locale } from '@/shared/lib/i18n/routing';
 
 interface Props {
   currentStep: QuizProperty;

@@ -1,20 +1,24 @@
 'use client';
 
-import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { FormProvider, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Typography } from '@/shared/ui/typography';
 import { List } from './components/list';
 import { Button } from '@/shared/ui/button';
+import { routes } from '@/shared/constants/routes';
 import { FormType, schema } from './schema';
-import { SearchCollections } from '../search-collections/search-collections';
+import { CheckQuiz } from '../../../features/quiz/ui/check-quiz';
+import { useQuiz } from '../../../entities/quiz/model/useQuiz';
 
-export const QuizTopics = () => {
-  const [isViewSearch, setIsViewSeaarch] = useState(false);
-
+export const QuizHate = () => {
   const tCommon = useTranslations('Common');
-  const t = useTranslations('QuizTopics');
+  const t = useTranslations('QuizHate');
+
+  const { handleUpdateQuiz } = useQuiz({
+    currentStep: 'hate',
+    nextPage: routes.quiz('topics'),
+  });
 
   const form = useForm<FormType>({
     resolver: zodResolver(schema),
@@ -29,17 +33,22 @@ export const QuizTopics = () => {
 
   const onSubmit = ({ selected }: FormType) => {
     const value = selected.join(', ');
-    console.log(value);
-    setIsViewSeaarch(true);
+    handleUpdateQuiz(value);
   };
 
   return (
-    <>
+    <CheckQuiz prevStep="age">
       <section className="flex flex-1 flex-col gap-4 pb-4">
         <div className="font-nunito mb-6 flex flex-col items-center gap-4 text-center">
-          <Typography variant="h1">{t('title')}</Typography>
-          <Typography className="text-regal-grey-200">
-            {t('description')}
+          <Typography
+            variant="h1"
+            className="font-albert text-3xl font-extrabold text-white"
+          >
+            {t.rich('title', {
+              highlighted: (chunks) => (
+                <span className="text-regal-pink-300">{chunks}</span>
+              ),
+            })}
           </Typography>
         </div>
 
@@ -62,8 +71,6 @@ export const QuizTopics = () => {
           </form>
         </FormProvider>
       </section>
-
-      {isViewSearch && <SearchCollections />}
-    </>
+    </CheckQuiz>
   );
 };

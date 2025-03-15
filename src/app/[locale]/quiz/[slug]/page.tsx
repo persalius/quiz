@@ -1,10 +1,10 @@
-import { QuizGender } from '@/features/quiz/quiz-gender/quiz-gender';
-import { QuizLanguage } from '@/features/quiz/quiz-language/quiz-language';
-import { QuizAge } from '@/features/quiz/quiz-age/quiz-age';
+import { QuizGender } from '@/widgets/quiz/quiz-gender/quiz-gender';
+import { QuizLanguage } from '@/widgets/quiz/quiz-language/quiz-language';
+import { QuizAge } from '@/widgets/quiz/quiz-age/quiz-age';
 import { quizSteps } from '@/shared/constants/quiz';
 import { QuizStep } from '@/shared/types/quiz';
-import { QuizHate } from '@/features/quiz/quiz-hate/quiz-hate';
-import { QuizTopics } from '@/features/quiz/quiz-topics/quiz-topics';
+import { QuizHate } from '@/widgets/quiz/quiz-hate/quiz-hate';
+import { QuizTopics } from '@/widgets/quiz/quiz-topics/quiz-topics';
 
 const steps = {
   [quizSteps.language]: <QuizLanguage />,

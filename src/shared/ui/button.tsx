@@ -11,14 +11,14 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const buttonVariants = cva(
-  'disabled:opacity-40 transition-opacity duration-300 flex justify-center items-center focus:outline-none focus-visible:ring-2 cursor-pointer transition-colors disabled:cursor-default font-albert text-[17px] leading-6 text-white px-5',
+  'disabled:opacity-40 active:scale-95 transition duration-300 flex justify-center items-center focus:outline-none focus-visible:ring-2 cursor-pointer disabled:cursor-default font-albert text-[17px] leading-6 text-white px-5',
   {
     variants: {
       variant: {
         primary:
           'bg-main-300 hover:bg-main-300/75 active:bg-main-300/65 rounded-2xl font-medium',
         secondary:
-          'bg-regal-pink hover:bg-regal-pink/75 active:bg-regal-pink/65 font-extrabold justify-center rounded-full',
+          'bg-regal-pink hover:not-disabled:bg-regal-pink/75 active:bg-regal-pink/65 font-extrabold justify-center rounded-full',
       },
       size: {
         sm: 'h-14',

@@ -1,4 +1,4 @@
-import { Home } from '@/features/home/home';
+import { Home } from '@/widgets/home/home';
 
 export default function HomePage() {
   return (

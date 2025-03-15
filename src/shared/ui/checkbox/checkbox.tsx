@@ -66,11 +66,11 @@ export const Checkbox: FC<PropsWithChildren<CheckboxProps>> = ({
   return (
     <motion.label
       whileHover={{ scale: 1.01 }}
-      whileTap={{ scale: 0.9 }}
+      whileTap={{ scale: variant === 'box' ? 0.9 : 0.8 }}
       whileFocus={{ scale: 1.03 }}
       transition={{ duration: 0.1, type: 'spring', stiffness: 100 }}
       htmlFor={id}
-      className={cn(variants({ variant, isChecked }), className, '')}
+      className={cn(variants({ variant, isChecked }), className)}
       onKeyPress={onToggle}
     >
       {children}

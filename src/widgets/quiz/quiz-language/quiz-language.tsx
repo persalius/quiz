@@ -1,9 +1,18 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import { Typography } from '@/shared/ui/typography';
 import { List } from './components/List';
+import { routes } from '@/shared/constants/routes';
+import { useQuiz } from '../../../entities/quiz/model/useQuiz';
 
 export const QuizLanguage = () => {
   const t = useTranslations('QuizLanguage');
+
+  const { handleUpdateQuiz } = useQuiz({
+    currentStep: 'language',
+    nextPage: routes.quiz('gender'),
+  });
 
   return (
     <section>
@@ -14,7 +23,7 @@ export const QuizLanguage = () => {
         </Typography>
       </div>
 
-      <List />
+      <List onClick={handleUpdateQuiz} />
     </section>
   );
 };

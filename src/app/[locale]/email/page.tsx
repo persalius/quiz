@@ -1,4 +1,4 @@
-import { Email } from '@/features/email/email';
+import { Email } from '@/widgets/email/email';
 
 export default function EmailPage() {
   return (

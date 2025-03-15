@@ -1,11 +1,9 @@
 import type { Metadata } from 'next';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Locale, routing } from '@/shared/lib/i18n/routing';
-import Providers from '../providers';
-import '../globals.css';
+import { QueryProvider, TranslateProvider } from '../providers';
 import { albertSans, niconne, nunitoSans } from '../fonts';
+import '../globals.css';
 
 export const metadata: Metadata = {
   title: 'Quiz',
@@ -24,18 +22,14 @@ export default async function RootLayout({
     notFound();
   }
 
-  const messages = await getMessages();
-
   return (
     <html lang={locale}>
       <body
         className={`${albertSans.variable} ${nunitoSans.variable} ${niconne.variable} bg-main-500 container mx-auto flex h-dvh flex-col px-5 antialiased lg:max-w-3xl`}
       >
-        <Providers>
-          <NextIntlClientProvider messages={messages}>
-            {children}
-          </NextIntlClientProvider>
-        </Providers>
+        <QueryProvider>
+          <TranslateProvider>{children}</TranslateProvider>
+        </QueryProvider>
       </body>
     </html>
   );

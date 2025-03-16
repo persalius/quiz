@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Quiz Application
+
+Quiz is an interactive web application built with Next.js that allows users to take quizzes in multiple languages. The app supports localization, dynamic question navigation, and user progress tracking.
+
+## Features
+
+- Multi-language support: Choose from English, French, German, or Spanish.
+- Interactive questions: Answer single-select, multiple-select, or bubble-type questions.
+- Progress tracking: Track your progress with a progress bar and question counter.
+- Form validation: Powered by React Hook Form and Zod for seamless and accurate input handling.
+- Database Simulation:
+  -- For testing purposes, the "database" is simulated using localStorage.
+  --All quiz data, including user answers, is stored in localStorage, allowing users to resume their progress even after refreshing the page.
+- REST API Simulation:
+  -- To mimic REST API requests, the app uses TanStack Query.
+  -- TanStack Query also acts as a state manager, handling data fetching, caching, and synchronization with the UI.
+- Client-Side Validation:
+  -- If a user tries to manually navigate to a specific question (e.g., by changing the URL) without providing answers to previous questions, they will be redirected to the first question.
+  -- The same validation applies to the email input page and the thank-you page. If the user hasn't completed the quiz or provided an email, they will be redirected to the appropriate step.
+  -- This validation happens on the client side because the app uses localStorage as a simulated database.
+  -- Note: If a real database were integrated, this validation would ideally be performed on the server side for enhanced security and reliability.
+- CSV download: Download your quiz answers in a CSV file.
+- Responsive design: Optimized for all devices with Tailwind CSS.
+- Internationalization support: Seamless localization with next-intl.
+
+## Live Demo
+
+Experience the Quiz application in action! Visit the live demo to take a quiz, test the multi-language support, and explore all the features:
+🔗 https://quiz-pi-gold.vercel.app/en
 
 ## Getting Started
 
-First, run the development server:
+To run the project locally, execute the following commands:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm i
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To build and run the production version, use:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm i
+pnpm build
+pnpm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js
+- TypeScript
+- Motion
+- Tanstack Query
+- React Hook Form
+- Zod
+- next-intl
+- Tailwind CSS
+- Papaparse

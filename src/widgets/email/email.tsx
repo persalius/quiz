@@ -38,7 +38,8 @@ export const Email = () => {
     handleSubmit,
     formState: { isValid },
   } = useForm<z.infer<typeof schema>>({
-    mode: 'onTouched',
+    // This is for demonstration. Need to change to onTouched
+    mode: 'all',
     shouldFocusError: true,
     resolver: zodResolver(schema),
     defaultValues: {

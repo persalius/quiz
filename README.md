@@ -4,24 +4,26 @@ Quiz is an interactive web application built with Next.js that allows users to t
 
 ## Features
 
-- Multi-language support: Choose from English, French, German, or Spanish.
-- Interactive questions: Answer single-select, multiple-select, or bubble-type questions.
-- Progress tracking: Track your progress with a progress bar and question counter.
-- Form validation: Powered by React Hook Form and Zod for seamless and accurate input handling.
-- Database Simulation:
-  - For testing purposes, the "database" is simulated using localStorage.
+- **Multi-language support**: Choose from English, French, German, or Spanish. Powered by **next-intl** for seamless localization.
+- **Interactive questions**: Answer single-select, multiple-select, or bubble-type questions.
+- **Progress tracking**: Track your progress with a progress bar and question counter.
+- **Form validation**: Powered by **React Hook Form** and **Zod** for seamless and accurate input handling.
+- **Dynamic topic filtering**:
+  - On the topics page, the available options are filtered based on the user's selected age.
+  - This ensures a personalized quiz experience tailored to the user's preferences.
+- **Database Simulation**:
+  - For testing purposes, the "database" is simulated using **localStorage**.
   - All quiz data, including user answers, is stored in localStorage, allowing users to resume their progress even after refreshing the page.
-- REST API Simulation:
-  - To mimic REST API requests, the app uses TanStack Query.
+- **REST API Simulation**:
+  - To mimic REST API requests, the app uses **TanStack Query**.
   - TanStack Query also acts as a state manager, handling data fetching, caching, and synchronization with the UI.
-- Client-Side Validation:
+- **Client-Side Validation**:
   - If a user tries to manually navigate to a specific question (e.g., by changing the URL) without providing answers to previous questions, they will be redirected to the first question.
   - The same validation applies to the email input page and the thank-you page. If the user hasn't completed the quiz or provided an email, they will be redirected to the appropriate step.
   - This validation happens on the client side because the app uses localStorage as a simulated database.
   - Note: If a real database were integrated, this validation would ideally be performed on the server side for enhanced security and reliability.
-- CSV download: Download your quiz answers in a CSV file.
-- Responsive design: Optimized for all devices with Tailwind CSS.
-- Internationalization support: Seamless localization with next-intl.
+- **CSV download**: Download your quiz answers in a CSV file.
+- **Responsive design**: Optimized for all devices with **Tailwind CSS**.
 
 ## Live Demo
 

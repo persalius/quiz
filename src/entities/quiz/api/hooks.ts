@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { clearQuiz, getQuiz, updateQuiz } from './queries';
 import { queryClient } from '@/app/providers/queryProvider';
+import { clearQuiz, getQuiz, updateQuiz } from './queries';
 
 export const useGetQuiz = () => {
   return useQuery({

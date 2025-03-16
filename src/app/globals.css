@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-main-500: rgba(31, 0, 43, 1);
+  --color-main-500: #1f002b;
   --color-main-300: #36173d;
   --color-main-200: #6d4376;
   --color-regal-grey: #ececfb;

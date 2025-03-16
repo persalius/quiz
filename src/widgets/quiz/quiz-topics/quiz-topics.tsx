@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from '@/shared/lib/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { FormProvider, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -9,6 +10,7 @@ import { Button } from '@/shared/ui/button';
 import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
 import { useQuiz } from '@/entities/quiz/model/useQuiz';
 import { quizSteps } from '@/shared/constants/quiz';
+import { routes } from '@/shared/constants/routes';
 import { FormType, schema } from './model/schema';
 import { SearchCollections } from './ui/search-collections/search-collections';
 import { List } from './ui/list';
@@ -17,6 +19,12 @@ export const QuizTopics = () => {
   const [isViewSearch, setIsViewSearch] = useState(false);
   const tCommon = useTranslations('Common');
   const t = useTranslations('QuizTopics');
+
+  const router = useRouter();
+
+  useEffect(() => {
+    router.prefetch(routes.email);
+  }, [router]);
 
   const { handleUpdateQuiz } = useQuiz({
     currentStep: quizSteps.topics,

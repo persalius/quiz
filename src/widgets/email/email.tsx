@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect } from 'react';
+import { useRouter } from '@/shared/lib/i18n/navigation';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -18,6 +20,12 @@ export const Email = () => {
   const tCommon = useTranslations('Common');
   const t = useTranslations('Email');
   const schema = useSchema();
+
+  const router = useRouter();
+
+  useEffect(() => {
+    router.prefetch(routes.completion);
+  }, [router]);
 
   const { handleUpdateQuiz } = useQuiz({
     currentStep: additionalQuiz.email,

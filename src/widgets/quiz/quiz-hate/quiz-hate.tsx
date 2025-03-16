@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect } from 'react';
+import { useRouter } from '@/shared/lib/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { FormProvider, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -15,6 +17,11 @@ import { FormType, schema } from './model/schema';
 export const QuizHate = () => {
   const tCommon = useTranslations('Common');
   const t = useTranslations('QuizHate');
+  const router = useRouter();
+
+  useEffect(() => {
+    router.prefetch(routes.quiz(quizSteps.topics));
+  }, [router]);
 
   const { handleUpdateQuiz } = useQuiz({
     currentStep: quizSteps.hate,

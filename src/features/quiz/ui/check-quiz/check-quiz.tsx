@@ -19,6 +19,7 @@ export const CheckQuiz: FC<PropsWithChildren<Props>> = ({
   const { data: quiz, isLoading } = useGetQuiz();
 
   useEffect(() => {
+    // === Important ===
     // === This check should be done on the server side when the DB is ready. ===
     if (!isLoading && !quiz?.[prevStep]) {
       router.replace(routes.quiz(quizSteps.language));

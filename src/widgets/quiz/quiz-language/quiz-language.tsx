@@ -18,7 +18,7 @@ export const QuizLanguage = () => {
   });
 
   useEffect(() => {
-    router.prefetch(`/quiz/${quizSteps.gender}`);
+    router.prefetch(routes.quiz(quizSteps.gender));
   }, [router]);
 
   const handleUpdate = (languageValue: string, languageId: string) => {

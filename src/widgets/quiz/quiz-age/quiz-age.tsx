@@ -1,7 +1,9 @@
 'use client';
 
-import { Typography } from '@/shared/ui/typography';
+import { useEffect } from 'react';
+import { useRouter } from '@/shared/lib/i18n/navigation';
 import { useTranslations } from 'next-intl';
+import { Typography } from '@/shared/ui/typography';
 import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
 import { useQuiz } from '@/entities/quiz/model/useQuiz';
 import { routes } from '@/shared/constants/routes';
@@ -10,11 +12,16 @@ import { List } from './ui/list';
 
 export const QuizAge = () => {
   const t = useTranslations('QuizAge');
+  const router = useRouter();
 
   const { handleUpdateQuiz } = useQuiz({
     currentStep: quizSteps.age,
     nextPage: routes.quiz(quizSteps.hate),
   });
+
+  useEffect(() => {
+    router.prefetch(routes.quiz(quizSteps.hate));
+  }, [router]);
 
   return (
     <CheckQuiz prevStep={quizSteps.gender}>

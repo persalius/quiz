@@ -1,5 +1,10 @@
+import { Metadata } from 'next';
 import { Transition } from '@/shared/ui/transition';
 import { Completion } from '@/widgets/completion';
+
+export const metadata: Metadata = {
+  title: 'completion',
+};
 
 export default function CompletionPage() {
   return (

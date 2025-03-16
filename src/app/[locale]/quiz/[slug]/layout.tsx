@@ -4,6 +4,17 @@ import { quizSteps } from '@/shared/constants/quiz';
 import { QuizStep } from '@/shared/types/quiz';
 import { Transition } from '@/shared/ui/transition';
 
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  return {
+    title: slug,
+  };
+}
+
 export default async function Layout({
   children,
   params,

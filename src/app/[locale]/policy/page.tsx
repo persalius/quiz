@@ -1,6 +1,11 @@
+import { Metadata } from 'next';
 import { Link } from '@/shared/ui/link';
 import { Typography } from '@/shared/ui/typography';
 import { routes } from '@/shared/constants/routes';
+
+export const metadata: Metadata = {
+  title: 'policy',
+};
 
 export default function PolicyPage() {
   return (

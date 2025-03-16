@@ -1,8 +1,6 @@
-import { QuizStep } from '../types/quiz';
-
 export const routes = {
   home: '/',
-  quiz: (id: QuizStep) => `/quiz/${id}`,
+  quiz: (id: string) => `/quiz/${id}`,
   email: '/email',
   policy: '/policy',
   terms: '/terms',

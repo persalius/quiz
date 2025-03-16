@@ -6,6 +6,7 @@ import { Typography } from '@/shared/ui/typography';
 import { routes } from '@/shared/constants/routes';
 import { useQuiz } from '@/entities/quiz/model/useQuiz';
 import { quizSteps } from '@/shared/constants/quiz';
+import { quizInformation } from '@/shared/constants/quiInformtaion';
 import { List } from './ui/List';
 import { useEffect } from 'react';
 
@@ -18,12 +19,16 @@ export const QuizLanguage = () => {
   });
 
   useEffect(() => {
-    router.prefetch(routes.quiz(quizSteps.gender));
+    if (quizInformation.language.nextQuestion) {
+      router.prefetch(routes.quiz(quizInformation.language.nextQuestion));
+    }
   }, [router]);
 
   const handleUpdate = (languageValue: string, languageId: string) => {
     handleUpdateQuiz(languageValue, () =>
-      router.push(routes.quiz(quizSteps.gender), { locale: languageId })
+      router.push(routes.quiz(quizInformation.language.nextQuestion), {
+        locale: languageId,
+      })
     );
   };
 

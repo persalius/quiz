@@ -1,8 +1,8 @@
 import { useRouter } from '@/shared/lib/i18n/navigation';
-import { useUpdateQuiz } from '../api/hooks';
 import { QuizProperty } from '@/shared/types/quiz';
-import { quizDefaultData } from '../../../widgets/quiz/constants';
 import { Locale } from '@/shared/lib/i18n/routing';
+import { quizInformation } from '@/shared/constants/quiInformtaion';
+import { useUpdateQuiz } from '../api/hooks';
 
 interface Props {
   currentStep: QuizProperty;
@@ -27,7 +27,9 @@ export const useQuiz = ({ currentStep, nextPage, onSuccess }: Props) => {
     mutate(
       {
         [currentStep]: {
-          ...quizDefaultData[currentStep],
+          order: quizInformation[currentStep].order,
+          title: quizInformation[currentStep].title,
+          type: quizInformation[currentStep].type,
           answer,
         },
       },

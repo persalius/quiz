@@ -5,19 +5,19 @@ import { ArrowIcon } from '@/shared/icons';
 import { Progress } from './ui/progress';
 import { Steps } from './ui/steps';
 import { QuizStep } from '@/shared/types/quiz';
-import { getQuizNumber } from '@/shared/lib/utils/quiz';
+import { getQuizNav } from '@/shared/lib/utils/quiz';
 
 interface Props {
   quizId: QuizStep;
 }
 
 export const QuizHeader: FC<Props> = ({ quizId }) => {
-  const { quizNumber, prevStep } = getQuizNumber(quizId);
+  const { quizNumber, prevStep } = getQuizNav(quizId);
 
   return (
     <header className="pt-4">
       <div className="mb-5 flex items-center justify-between">
-        {quizNumber !== 1 ? (
+        {!!prevStep ? (
           <Link
             href={routes.quiz(prevStep)}
             className="group flex h-6 w-6 items-center justify-start"
@@ -28,10 +28,10 @@ export const QuizHeader: FC<Props> = ({ quizId }) => {
           <div className="h-6 w-6" />
         )}
 
-        <Steps quizId={quizId} />
+        <Steps quizNumber={quizNumber} />
         <div className="h-6 w-6" />
       </div>
-      <Progress quizId={quizId} />
+      <Progress quizNumber={quizNumber} />
     </header>
   );
 };

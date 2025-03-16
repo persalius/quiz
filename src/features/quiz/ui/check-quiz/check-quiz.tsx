@@ -8,7 +8,7 @@ import { useGetQuiz } from '@/entities/quiz/api/hooks';
 import { quizSteps } from '@/shared/constants/quiz';
 
 interface Props {
-  prevStep: QuizProperty;
+  prevStep?: QuizProperty;
 }
 
 export const CheckQuiz: FC<PropsWithChildren<Props>> = ({
@@ -21,12 +21,12 @@ export const CheckQuiz: FC<PropsWithChildren<Props>> = ({
   useEffect(() => {
     // === Important ===
     // === This check should be done on the server side when the DB is ready. ===
-    if (!isLoading && !quiz?.[prevStep]) {
+    if (!isLoading && prevStep && !quiz?.[prevStep]) {
       router.replace(routes.quiz(quizSteps.language));
     }
   }, [quiz, isLoading, router, prevStep]);
 
-  if (isLoading || !Object.keys(quiz || {}).length) {
+  if ((isLoading || !Object.keys(quiz || {}).length) && prevStep) {
     return null;
   }
 

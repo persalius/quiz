@@ -1,7 +1,7 @@
 import { additionalQuiz, quizSteps } from '../constants/quiz';
 
 export type QuizStep = (typeof quizSteps)[keyof typeof quizSteps];
-export type QdditionalQuizQuistion =
+export type QdditionalQuizQuestion =
   (typeof additionalQuiz)[keyof typeof additionalQuiz];
 
 export type QuizType =
@@ -11,13 +11,21 @@ export type QuizType =
   | 'bubble'
   | 'email';
 
-export interface QuizElement {
+export type QuizElement = {
   order: number;
   title: string;
   answer: string;
   type: QuizType;
-}
+};
 
-export type QuizProperty = QuizStep | QdditionalQuizQuistion;
+export type QuizProperty = QuizStep | QdditionalQuizQuestion;
 
 export type Quiz = Record<QuizProperty, QuizElement>;
+
+type QuizStepInformationValue = QuizElement & {
+  prevQuestion?: QuizStep;
+  nextQuestion: QuizProperty;
+};
+
+export type QuizInformation = Record<QuizStep, QuizStepInformationValue> &
+  Record<QdditionalQuizQuestion, Partial<QuizStepInformationValue>>;

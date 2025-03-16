@@ -3,15 +3,12 @@
 import { CSSProperties, FC } from 'react';
 import { motion } from 'motion/react';
 import { quizStepsLength } from '@/shared/constants/quiz';
-import { QuizStep } from '@/shared/types/quiz';
-import { getQuizNumber } from '@/shared/lib/utils/quiz';
 
 interface Props {
-  quizId: QuizStep;
+  quizNumber: number;
 }
 
-export const Progress: FC<Props> = ({ quizId }) => {
-  const { quizNumber } = getQuizNumber(quizId);
+export const Progress: FC<Props> = ({ quizNumber }) => {
   const percent = (100 / quizStepsLength) * quizNumber;
 
   return (

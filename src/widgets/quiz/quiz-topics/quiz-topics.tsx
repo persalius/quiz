@@ -11,6 +11,7 @@ import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
 import { useQuiz } from '@/entities/quiz/model/useQuiz';
 import { quizSteps } from '@/shared/constants/quiz';
 import { routes } from '@/shared/constants/routes';
+import { quizInformation } from '@/shared/constants/quiInformtaion';
 import { FormType, schema } from './model/schema';
 import { SearchCollections } from './ui/search-collections/search-collections';
 import { List } from './ui/list';
@@ -48,7 +49,7 @@ export const QuizTopics = () => {
   };
 
   return (
-    <CheckQuiz prevStep={quizSteps.hate}>
+    <CheckQuiz prevStep={quizInformation.topics.prevQuestion}>
       <section className="flex flex-1 flex-col gap-4 pb-5">
         <div className="font-nunito mb-6 flex flex-col items-center gap-4 text-center">
           <Typography variant="h1">{t('title')}</Typography>

@@ -11,6 +11,7 @@ import { routes } from '@/shared/constants/routes';
 import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
 import { useQuiz } from '@/entities/quiz/model/useQuiz';
 import { quizSteps } from '@/shared/constants/quiz';
+import { quizInformation } from '@/shared/constants/quiInformtaion';
 import { List } from './ui/list';
 import { FormType, schema } from './model/schema';
 
@@ -20,12 +21,12 @@ export const QuizHate = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.prefetch(routes.quiz(quizSteps.topics));
+    router.prefetch(routes.quiz(quizInformation.hate.nextQuestion));
   }, [router]);
 
   const { handleUpdateQuiz } = useQuiz({
     currentStep: quizSteps.hate,
-    nextPage: routes.quiz(quizSteps.topics),
+    nextPage: routes.quiz(quizInformation.hate.nextQuestion),
   });
 
   const form = useForm<FormType>({
@@ -45,7 +46,7 @@ export const QuizHate = () => {
   };
 
   return (
-    <CheckQuiz prevStep={quizSteps.age}>
+    <CheckQuiz prevStep={quizInformation.hate.prevQuestion}>
       <section className="flex flex-1 flex-col gap-4 pb-5">
         <div className="font-nunito mb-6 flex flex-col items-center gap-4 text-center">
           <Typography

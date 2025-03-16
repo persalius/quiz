@@ -1,11 +1,11 @@
-import { quizSteps } from '@/shared/constants/quiz';
 import { QuizStep } from '@/shared/types/quiz';
+import { quizInformation } from '@/shared/constants/quiInformtaion';
 
-const keysSteps = Object.values(quizSteps) as QuizStep[];
+export const getQuizNav = (quizId: QuizStep) => {
+  const quiz = quizInformation[quizId];
+  const quizNumber = quiz.order;
 
-export const getQuizNumber = (quizId: QuizStep) => {
-  const quizNumber = keysSteps.indexOf(quizId) + 1;
-  const prevStep = keysSteps[quizNumber - 2];
+  const prevStep = quiz.prevQuestion;
 
   return { quizNumber, prevStep };
 };

@@ -1,10 +1,9 @@
 import { FC, useEffect } from 'react';
-import { useRouter } from '@/shared/lib/i18n/navigation';
 import { animate, motion, useMotionValue, useTransform } from 'motion/react';
-import { routes } from '@/shared/constants/routes';
 
 type Props = {
   progress: number;
+  onAnimationComplete: () => void;
 };
 
 const size = 252;
@@ -14,8 +13,10 @@ const circumference = 2 * Math.PI * radius;
 
 const duration = 5;
 
-export const CircularProgressBar: FC<Props> = ({ progress }) => {
-  const router = useRouter();
+export const CircularProgressBar: FC<Props> = ({
+  progress,
+  onAnimationComplete,
+}) => {
   const offset = circumference - (progress / 100) * circumference;
 
   const count = useMotionValue(0);
@@ -25,10 +26,6 @@ export const CircularProgressBar: FC<Props> = ({ progress }) => {
     const controls = animate(count, 100, { duration });
     return () => controls.stop();
   }, [count]);
-
-  const handleAnimationComplete = () => {
-    router.push(routes.email);
-  };
 
   return (
     <div className="relative size-63">
@@ -52,7 +49,7 @@ export const CircularProgressBar: FC<Props> = ({ progress }) => {
           initial={{ strokeDashoffset: circumference }}
           animate={{ strokeDashoffset: offset }}
           transition={{ type: 'tween', duration }}
-          onAnimationComplete={handleAnimationComplete}
+          onAnimationComplete={onAnimationComplete}
         />
       </svg>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center">

@@ -9,6 +9,7 @@ import { useQuiz } from '@/entities/quiz/model/useQuiz';
 import { routes } from '@/shared/constants/routes';
 import { quizSteps } from '@/shared/constants/quiz';
 import { List } from './ui/list';
+import { quizInformation } from '@/shared/constants/quiInformtaion';
 
 export const QuizAge = () => {
   const t = useTranslations('QuizAge');
@@ -16,15 +17,15 @@ export const QuizAge = () => {
 
   const { handleUpdateQuiz } = useQuiz({
     currentStep: quizSteps.age,
-    nextPage: routes.quiz(quizSteps.hate),
+    nextPage: routes.quiz(quizInformation.age.nextQuestion),
   });
 
   useEffect(() => {
-    router.prefetch(routes.quiz(quizSteps.hate));
+    router.prefetch(routes.quiz(quizInformation.age.nextQuestion));
   }, [router]);
 
   return (
-    <CheckQuiz prevStep={quizSteps.gender}>
+    <CheckQuiz prevStep={quizInformation.age.prevQuestion}>
       <section>
         <div className="font-nunito mb-6 flex flex-col items-center gap-4 text-center">
           <Typography

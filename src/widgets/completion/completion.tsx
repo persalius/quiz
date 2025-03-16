@@ -9,7 +9,7 @@ import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
 import { useClearQuiz } from '@/entities/quiz/api/hooks';
 import { Button } from '@/shared/ui/button';
 import { useDownloadCSV } from '@/entities/quiz/model/useDownloadCSV';
-import { quizSteps } from '@/shared/constants/quiz';
+import { additionalQuiz, quizSteps } from '@/shared/constants/quiz';
 import { Checkmark } from './ui/checkmark';
 
 export const Completion = () => {
@@ -23,7 +23,7 @@ export const Completion = () => {
   });
 
   return (
-    <CheckQuiz prevStep="email">
+    <CheckQuiz prevStep={additionalQuiz.email}>
       <section className="flex h-full flex-col items-center justify-between pt-24">
         <div className="flex flex-col items-center">
           <Typography

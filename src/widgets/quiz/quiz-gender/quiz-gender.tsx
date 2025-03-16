@@ -7,7 +7,7 @@ import { routes } from '@/shared/constants/routes';
 import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
 import { useQuiz } from '@/entities/quiz/model/useQuiz';
 import { quizSteps } from '@/shared/constants/quiz';
-import { quizInformation } from '@/shared/constants/quiInformtaion';
+import { quizInformation } from '@/shared/constants/quizInformtaion';
 import { List } from './ui/list';
 import { useEffect } from 'react';
 

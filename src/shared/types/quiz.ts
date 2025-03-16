@@ -1,7 +1,7 @@
 import { additionalQuiz, quizSteps } from '../constants/quiz';
 
 export type QuizStep = (typeof quizSteps)[keyof typeof quizSteps];
-export type QdditionalQuizQuestion =
+export type AdditionalQuizQuestion =
   (typeof additionalQuiz)[keyof typeof additionalQuiz];
 
 export type QuizType =
@@ -18,14 +18,18 @@ export type QuizElement = {
   type: QuizType;
 };
 
-export type QuizProperty = QuizStep | QdditionalQuizQuestion;
+export type QuizProperty = QuizStep | AdditionalQuizQuestion;
 
 export type Quiz = Record<QuizProperty, QuizElement>;
 
-type QuizStepInformationValue = QuizElement & {
+type QuizStepInformationValue = {
   prevQuestion?: QuizStep;
   nextQuestion: QuizProperty;
 };
 
-export type QuizInformation = Record<QuizStep, QuizStepInformationValue> &
-  Record<QdditionalQuizQuestion, Partial<QuizStepInformationValue>>;
+export type QuizInformation = {
+  [key in QuizStep]: QuizElement & QuizStepInformationValue;
+} & {
+  [key in AdditionalQuizQuestion]: QuizElement &
+    Partial<QuizStepInformationValue>;
+};

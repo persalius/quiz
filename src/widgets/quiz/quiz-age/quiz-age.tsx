@@ -9,7 +9,7 @@ import { useQuiz } from '@/entities/quiz/model/useQuiz';
 import { routes } from '@/shared/constants/routes';
 import { quizSteps } from '@/shared/constants/quiz';
 import { List } from './ui/list';
-import { quizInformation } from '@/shared/constants/quiInformtaion';
+import { quizInformation } from '@/shared/constants/quizInformtaion';
 
 export const QuizAge = () => {
   const t = useTranslations('QuizAge');

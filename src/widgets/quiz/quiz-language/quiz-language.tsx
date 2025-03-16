@@ -6,7 +6,7 @@ import { Typography } from '@/shared/ui/typography';
 import { routes } from '@/shared/constants/routes';
 import { useQuiz } from '@/entities/quiz/model/useQuiz';
 import { quizSteps } from '@/shared/constants/quiz';
-import { quizInformation } from '@/shared/constants/quiInformtaion';
+import { quizInformation } from '@/shared/constants/quizInformtaion';
 import { List } from './ui/List';
 import { useEffect } from 'react';
 

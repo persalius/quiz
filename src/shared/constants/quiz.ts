@@ -8,6 +8,6 @@ export const quizSteps = {
 
 export const additionalQuiz = {
   email: 'email',
-};
+} as const;
 
 export const quizStepsLength = Object.values(quizSteps).length;

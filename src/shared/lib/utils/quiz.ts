@@ -1,5 +1,5 @@
 import { QuizStep } from '@/shared/types/quiz';
-import { quizInformation } from '@/shared/constants/quiInformtaion';
+import { quizInformation } from '@/shared/constants/quizInformtaion';
 
 export const getQuizNav = (quizId: QuizStep) => {
   const quiz = quizInformation[quizId];

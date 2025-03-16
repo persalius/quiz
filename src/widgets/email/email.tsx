@@ -15,6 +15,7 @@ import { useQuiz } from '@/entities/quiz/model/useQuiz';
 import { additionalQuiz } from '@/shared/constants/quiz';
 import { useSchema } from './model/schema';
 import { Policy } from './ui/policy';
+import { quizInformation } from '@/shared/constants/quizInformtaion';
 
 export const Email = () => {
   const tCommon = useTranslations('Common');
@@ -50,7 +51,7 @@ export const Email = () => {
   };
 
   return (
-    <CheckQuiz prevStep="topics">
+    <CheckQuiz prevStep={quizInformation.email.prevQuestion}>
       <section className="mx-auto flex h-full w-full max-w-xl flex-1 flex-col items-center pt-18">
         <div className="flex flex-col items-center gap-3">
           <Typography

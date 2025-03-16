@@ -1,7 +1,7 @@
 import { useRouter } from '@/shared/lib/i18n/navigation';
 import { QuizProperty } from '@/shared/types/quiz';
 import { Locale } from '@/shared/lib/i18n/routing';
-import { quizInformation } from '@/shared/constants/quiInformtaion';
+import { quizInformation } from '@/shared/constants/quizInformtaion';
 import { useUpdateQuiz } from '../api/hooks';
 
 interface Props {

@@ -11,7 +11,7 @@ import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
 import { useQuiz } from '@/entities/quiz/model/useQuiz';
 import { quizSteps } from '@/shared/constants/quiz';
 import { routes } from '@/shared/constants/routes';
-import { quizInformation } from '@/shared/constants/quiInformtaion';
+import { quizInformation } from '@/shared/constants/quizInformtaion';
 import { FormType, schema } from './model/schema';
 import { SearchCollections } from './ui/search-collections/search-collections';
 import { List } from './ui/list';

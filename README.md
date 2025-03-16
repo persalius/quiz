@@ -26,7 +26,7 @@ Quiz is an interactive web application built with Next.js that allows users to t
 ## Live Demo
 
 Experience the Quiz application in action! Visit the live demo to take a quiz, test the multi-language support, and explore all the features:
-🔗 https://quiz-pi-gold.vercel.app/en
+🔗 <a href="https://quiz-pi-gold.vercel.app/en" target="_blank">https://quiz-pi-gold.vercel.app/en</a>
 
 ## Getting Started
 

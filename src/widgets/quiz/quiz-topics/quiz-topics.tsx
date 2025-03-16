@@ -8,6 +8,7 @@ import { Typography } from '@/shared/ui/typography';
 import { Button } from '@/shared/ui/button';
 import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
 import { useQuiz } from '@/entities/quiz/model/useQuiz';
+import { quizSteps } from '@/shared/constants/quiz';
 import { FormType, schema } from './model/schema';
 import { SearchCollections } from './ui/search-collections/search-collections';
 import { List } from './ui/list';
@@ -18,7 +19,7 @@ export const QuizTopics = () => {
   const t = useTranslations('QuizTopics');
 
   const { handleUpdateQuiz } = useQuiz({
-    currentStep: 'topics',
+    currentStep: quizSteps.topics,
     onSuccess: () => setIsViewSearch(true),
   });
 
@@ -39,7 +40,7 @@ export const QuizTopics = () => {
   };
 
   return (
-    <CheckQuiz prevStep="hate">
+    <CheckQuiz prevStep={quizSteps.hate}>
       <section className="flex flex-1 flex-col gap-4 pb-5">
         <div className="font-nunito mb-6 flex flex-col items-center gap-4 text-center">
           <Typography variant="h1">{t('title')}</Typography>

@@ -1,6 +1,8 @@
-import { quizSteps } from '../constants/quiz';
+import { additionalQuiz, quizSteps } from '../constants/quiz';
 
-export type QuizStep = keyof typeof quizSteps;
+export type QuizStep = (typeof quizSteps)[keyof typeof quizSteps];
+export type QdditionalQuizQuistion =
+  (typeof additionalQuiz)[keyof typeof additionalQuiz];
 
 export type QuizType =
   | 'single-select'
@@ -16,6 +18,6 @@ export interface QuizElement {
   type: QuizType;
 }
 
-export type QuizProperty = QuizStep | 'email';
+export type QuizProperty = QuizStep | QdditionalQuizQuistion;
 
 export type Quiz = Record<QuizProperty, QuizElement>;

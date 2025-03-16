@@ -5,18 +5,19 @@ import { useTranslations } from 'next-intl';
 import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
 import { useQuiz } from '@/entities/quiz/model/useQuiz';
 import { routes } from '@/shared/constants/routes';
+import { quizSteps } from '@/shared/constants/quiz';
 import { List } from './ui/list';
 
 export const QuizAge = () => {
   const t = useTranslations('QuizAge');
 
   const { handleUpdateQuiz } = useQuiz({
-    currentStep: 'age',
-    nextPage: routes.quiz('hate'),
+    currentStep: quizSteps.age,
+    nextPage: routes.quiz(quizSteps.hate),
   });
 
   return (
-    <CheckQuiz prevStep="gender">
+    <CheckQuiz prevStep={quizSteps.gender}>
       <section>
         <div className="font-nunito mb-6 flex flex-col items-center gap-4 text-center">
           <Typography

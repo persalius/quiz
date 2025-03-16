@@ -1,38 +1,39 @@
+import { additionalQuiz, quizSteps } from '@/shared/constants/quiz';
 import { Quiz } from '@/shared/types/quiz';
 
 // Quiz default configuration
 export const quizDefaultData: Quiz = {
-  language: {
+  [quizSteps.language]: {
     order: 1,
     title: 'What is your preferred language?',
     type: 'single-select',
     answer: '',
   },
-  gender: {
+  [quizSteps.gender]: {
     order: 2,
     title: 'What gender do you identify with?',
     type: 'single-select-image',
     answer: '',
   },
-  age: {
+  [quizSteps.age]: {
     order: 3,
     title: 'What is your age?',
     type: 'single-select',
     answer: '',
   },
-  hate: {
+  [quizSteps.hate]: {
     order: 4,
     title: 'What do you hate the most in a book?',
     type: 'multiple-select',
     answer: '',
   },
-  topics: {
+  [quizSteps.topics]: {
     order: 5,
     title: 'What are your favorite topics?',
     type: 'bubble',
     answer: '',
   },
-  email: {
+  [additionalQuiz.email]: {
     order: 6,
     title: 'Email',
     type: 'email',

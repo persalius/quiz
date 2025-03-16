@@ -1,8 +1,8 @@
-import Papa from 'papaparse';
 import { useGetQuiz } from '../api/hooks';
 import { QuizElement } from '@/shared/types/quiz';
 
-const handleDownloadCSV = (data: QuizElement[]) => {
+const handleDownloadCSV = async (data: QuizElement[]) => {
+  const Papa = await import('papaparse');
   const csv = Papa.unparse(data);
 
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });

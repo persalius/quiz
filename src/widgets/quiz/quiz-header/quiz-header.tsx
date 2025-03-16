@@ -5,18 +5,14 @@ import { ArrowIcon } from '@/shared/icons';
 import { Progress } from './ui/progress';
 import { Steps } from './ui/steps';
 import { QuizStep } from '@/shared/types/quiz';
-import { quizSteps } from '@/shared/constants/quiz';
 import { getQuizNumber } from '@/shared/lib/utils/quiz';
 
 interface Props {
   quizId: QuizStep;
 }
 
-const keys = Object.keys(quizSteps) as QuizStep[];
-
 export const QuizHeader: FC<Props> = ({ quizId }) => {
-  const quizNumber = getQuizNumber(quizId);
-  const prevStep = keys[quizNumber - 2];
+  const { quizNumber, prevStep } = getQuizNumber(quizId);
 
   return (
     <header className="pt-4">

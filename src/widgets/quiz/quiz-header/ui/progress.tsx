@@ -11,15 +11,15 @@ interface Props {
 }
 
 export const Progress: FC<Props> = ({ quizId }) => {
-  const quizIndex = getQuizNumber(quizId);
-  const percent = (100 / quizStepsLength) * quizIndex;
+  const { quizNumber } = getQuizNumber(quizId);
+  const percent = (100 / quizStepsLength) * quizNumber;
 
   return (
     <div
       role="meter"
       aria-valuemin={1}
       aria-valuemax={quizStepsLength}
-      aria-valuenow={quizIndex}
+      aria-valuenow={quizNumber}
       className="bg-regal-grey-100 h-1 w-full overflow-hidden rounded-full"
     >
       <motion.div

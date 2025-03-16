@@ -8,6 +8,7 @@ import { Button } from '@/shared/ui/button';
 import { routes } from '@/shared/constants/routes';
 import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
 import { useQuiz } from '@/entities/quiz/model/useQuiz';
+import { quizSteps } from '@/shared/constants/quiz';
 import { List } from './ui/list';
 import { FormType, schema } from './model/schema';
 
@@ -16,8 +17,8 @@ export const QuizHate = () => {
   const t = useTranslations('QuizHate');
 
   const { handleUpdateQuiz } = useQuiz({
-    currentStep: 'hate',
-    nextPage: routes.quiz('topics'),
+    currentStep: quizSteps.hate,
+    nextPage: routes.quiz(quizSteps.topics),
   });
 
   const form = useForm<FormType>({
@@ -37,7 +38,7 @@ export const QuizHate = () => {
   };
 
   return (
-    <CheckQuiz prevStep="age">
+    <CheckQuiz prevStep={quizSteps.age}>
       <section className="flex flex-1 flex-col gap-4 pb-5">
         <div className="font-nunito mb-6 flex flex-col items-center gap-4 text-center">
           <Typography

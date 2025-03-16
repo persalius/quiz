@@ -4,6 +4,10 @@ export const quizSteps = {
   age: 'age',
   hate: 'hate',
   topics: 'topics',
+} as const;
+
+export const additionalQuiz = {
+  email: 'email',
 };
 
-export const quizStepsLength = Object.keys(quizSteps).length;
+export const quizStepsLength = Object.values(quizSteps).length;

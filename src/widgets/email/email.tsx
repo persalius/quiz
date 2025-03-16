@@ -10,6 +10,7 @@ import { Typography } from '@/shared/ui/typography';
 import { routes } from '@/shared/constants/routes';
 import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
 import { useQuiz } from '@/entities/quiz/model/useQuiz';
+import { additionalQuiz } from '@/shared/constants/quiz';
 import { useSchema } from './model/schema';
 import { Policy } from './ui/policy';
 
@@ -19,7 +20,7 @@ export const Email = () => {
   const schema = useSchema();
 
   const { handleUpdateQuiz } = useQuiz({
-    currentStep: 'email',
+    currentStep: additionalQuiz.email,
     nextPage: routes.completion,
   });
 

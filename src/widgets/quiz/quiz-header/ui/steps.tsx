@@ -12,12 +12,12 @@ interface Props {
 const className = 'text-regal-grey-100 text-lg leading-5 font-bold';
 
 export const Steps: FC<Props> = ({ quizId }) => {
-  const quizIndex = getQuizNumber(quizId);
+  const { quizNumber } = getQuizNumber(quizId);
 
   return (
     <div className="flex items-center">
       <Typography className={cn(className, 'text-regal-pink')}>
-        {quizIndex}
+        {quizNumber}
       </Typography>
       <Typography className={cn(className, 'font-medium')}>/</Typography>
       <Typography className={className}>{quizStepsLength}</Typography>

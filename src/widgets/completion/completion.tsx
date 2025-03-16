@@ -1,15 +1,16 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { Typography } from '@/shared/ui/typography';
 import { useRouter } from '@/shared/lib/i18n/navigation';
-import { useTranslations } from 'next-intl';
-import { Checkmark } from './ui/checkmark';
 import { DownloadIcon } from '@/shared/icons';
 import { routes } from '@/shared/constants/routes';
 import { CheckQuiz } from '@/features/quiz/ui/check-quiz';
 import { useClearQuiz } from '@/entities/quiz/api/hooks';
 import { Button } from '@/shared/ui/button';
 import { useDownloadCSV } from '@/entities/quiz/model/useDownloadCSV';
+import { quizSteps } from '@/shared/constants/quiz';
+import { Checkmark } from './ui/checkmark';
 
 export const Completion = () => {
   const t = useTranslations('Completion');
@@ -18,7 +19,7 @@ export const Completion = () => {
   const { onDownloadCSV } = useDownloadCSV();
 
   const { mutate } = useClearQuiz({
-    onSuccess: () => router.replace(routes.quiz('language')),
+    onSuccess: () => router.replace(routes.quiz(quizSteps.language)),
   });
 
   return (
